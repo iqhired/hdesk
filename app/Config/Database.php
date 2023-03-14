@@ -27,11 +27,11 @@ class Database extends Config
     public array $default = [
         'DSN'      => '',
         'hostname' => 'localhost',
-        'username' => 'root',
-        'password' => '',
-        'database' => 'crud_ci',
+        'username' => 'ashams001',
+        'password' => 'iqHired@123',
+        'database' => 'hdesk',
         'DBDriver' => 'MySQLi',
-        'DBPrefix' => '',
+        'DBPrefix' => 'gy',
         'pConnect' => false,
         'DBDebug'  => true,
         'charset'  => 'utf8',
@@ -50,7 +50,7 @@ class Database extends Config
      */
     public array $tests = [
         'DSN'         => '',
-        'hostname'    => '127.0.0.1',
+        'hostname'    => 'localhost',
         'username'    => '',
         'password'    => '',
         'database'    => ':memory:',

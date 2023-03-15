@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\checkin_details;
+use App\Models\checkout_detail;
 
 class Home1 extends BaseController
 {
@@ -37,9 +38,24 @@ class Home1 extends BaseController
             'p_visit' => $this->request->getPost('p_visit'),
         ];
         $checkinn->save($data);
-        return redirect()->to(base_url('check_in'))->with('status','User Added Succesfully');
-        return view('check/check_in');
+        return redirect()->to(base_url('homepage'))->with('status','User Checkin Succesfully');
+
     }
+
+    public function storeout()
+    {
+        $checkoutt = new checkout_detail();
+        $data = [
+            'f_name' => $this->request->getPost('f_name'),
+
+            'c_name' => $this->request->getPost('c_name'),
+
+        ];
+        $checkoutt->save($data);
+        return redirect()->to(base_url('homepage'))->with('status','User checkout Succesfully');
+
+    }
+
 
 
 

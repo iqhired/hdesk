@@ -32,6 +32,7 @@
         </ul>
     </div>
 </nav>
+<form action="<?= base_url('checkout_store');?>" method="post">
 
 <div class="container-fluid px-1 py-5 mx-auto">
     <div class="row d-flex justify-content-center">
@@ -66,50 +67,6 @@
 </div>
 
 
-<section class="my-5">
-    <div class="py-5">
-        <b><h2 class="text-center">CHECK-OUT</h2></b>
-    </div>
-
-    <div class="w-50 m-auto">
-        <form action="check_out_config.php" method="post">
-
-            <div class="pd-30 pd-sm-20">
-                <div class="row row-xs">
-                    <div class="col-md-2">
-                        <label class="form-label mg-b-0">First Name</label>
-                    </div>
-                    <div class="col-md-10 mg-t-10 mg-md-t-0">
-                        <input type="text" class="form-control" name="f_name" placeholder="Enter First Name" >
-                    </div>
-                </div>
-            </div>
-            </br>
-
-            <div class="pd-30 pd-sm-20">
-                <div class="row row-xs">
-                    <div class="col-md-2">
-                        <label class="form-label mg-b-0">Company Name</label>
-                    </div>
-                    <div class="col-md-10 mg-t-10 mg-md-t-0">
-                        <textarea class="form-control" name="c_name" placeholder="Enter Purpose of Visit"></textarea>
-                    </div>
-                </div>
-            </div>
-            </br>
-
-
-
-
-
-
-
-
-            <button type="submit" class="btn btn-primary">Submit</button>
-
-        </form>
-    </div>
-</section>
 
 <footer>
     <p class="p-3 bg-dark text-white text-center">@company.com</p>

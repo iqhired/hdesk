@@ -3,8 +3,8 @@
     <title></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/style.css')?>">
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/bootstrap4.min.css')?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('public/assets/css/style.css')?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('public/assets/css/bootstrap4.min.css')?>">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
     <style>
         .w-50 {
@@ -20,14 +20,14 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="<?= base_url('homepage');?>">COMAPANY NAME</a>
+    <a class="navbar-brand" href="<?= base_url('/');?>">COMAPANY NAME</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="<?= base_url('homepage');?>"> Home Page <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="<?= base_url('/');?>"> Home Page <span class="sr-only">(current)</span></a>
             </li>
         </ul>
     </div>

@@ -31,21 +31,12 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 
 
-$routes->get('homepage', 'Home1::index');
+$routes->get('/', 'Home1::index');
 $routes->get('check_in', 'Home1::checkin');
 $routes->get('check_out', 'Home1::checkout');
 
 $routes->post('checkin_store', 'Home1::store');
 $routes->post('checkout_store', 'Home1::storeout');
-
-
-
-
-
-
-
-
-
 
 
 

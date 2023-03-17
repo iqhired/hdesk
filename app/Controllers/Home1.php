@@ -38,7 +38,7 @@ class Home1 extends BaseController
             'p_visit' => $this->request->getPost('p_visit'),
         ];
         $checkinn->save($data);
-        return redirect()->to(base_url('homepage'))->with('status','User Checkin Succesfully');
+        return redirect()->to(base_url('/'))->with('status','User Checkin Succesfully');
 
     }
 
@@ -52,14 +52,9 @@ class Home1 extends BaseController
 
         ];
         $checkoutt->save($data);
-        return redirect()->to(base_url('homepage'))->with('status','User checkout Succesfully');
+        return redirect()->to(base_url('/'))->with('status','User checkout Succesfully');
 
     }
-
-
-
-
-
 
 
 

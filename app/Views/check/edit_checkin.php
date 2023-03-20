@@ -26,7 +26,7 @@ session_start();
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="<?= base_url('/');?>">COMAPANY NAME</a>
+    <a class="navbar-brand" href="<?= base_url('/');?>">COMPANY NAME</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -42,9 +42,6 @@ session_start();
     </div>
 </nav>
 
-
-
-
 <?php
 if(isset($_SESSION['status']))
 {
@@ -58,44 +55,47 @@ if(isset($_SESSION['status']))
 }
 ?>
 
-<form action="<?= base_url('checkin_store');?>" method="post">
+<form action="<?= base_url('check/updatein/'.$check['id']);?>" method="post">
+
     <div class="container-fluid px-1 py-5 mx-auto">
         <div class="row d-flex justify-content-center">
             <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
                 <div class="card">
-                    <b><h5 class="text-center mb-4">CHECK-IN</h5></b>
+                    <b><h5 class="text-center mb-4">UPDATE CHECK-IN</h5></b>
                     <div class="row justify-content-between text-left">
                         <div class="form-group col-sm-6 flex-column d-flex">
                             <label class="form-control-label px-3">First name<span class="text-danger"> *</span></label>
-                            <input type="text" id="fname" name="f_name" placeholder="Enter your first name" required >
+                            <input type="text" id="fname" name="f_name" value="<?=$check['f_name']?>" placeholder="Enter your first name" required >
                         </div>
                         <div class="form-group col-sm-6 flex-column d-flex">
-                            <label class="form-control-label px-3">Last name<span class="text-danger"></span></label> <input type="text" id="lname" name="l_name" placeholder="Enter your last name" >
+                            <label class="form-control-label px-3">Last name<span class="text-danger"></span></label>
+                            <input type="text" id="lname" name="l_name" value="<?=$check['l_name']?>" placeholder="Enter your last name" >
                         </div>
                     </div>
                     <div class="row justify-content-between text-left">
                         <div class="form-group col-sm-6 flex-column d-flex">
                             <label class="form-control-label px-3">Email<span class="text-danger"> </span></label>
-                            <input type="text" name="email" placeholder="Enter Email" >
+                            <input type="text" name="email" value="<?=$check['email']?>" placeholder="Enter Email" >
                         </div>
                         <div class="form-group col-sm-6 flex-column d-flex">
                             <label class="form-control-label px-3">Phone number<span class="text-danger"> </span></label>
-                            <input type="text"  name="mobile" placeholder="Enter Phone number" >
+                            <input type="text"  name="mobile" value="<?=$check['mobile']?>" placeholder="Enter Phone number" >
                         </div>
                     </div>
                     <div class="row justify-content-between text-left">
                         <div class="form-group col-sm-12 flex-column d-flex">
                             <label class="form-control-label px-3">Company Name<span class="text-danger"> *</span></label>
-                            <input type="text" name="c_name" placeholder="Enter Company Name" required>
+                            <input type="text" name="c_name" value="<?=$check['c_name']?>" placeholder="Enter Company Name" required>
                         </div>
                     </div>
                     <div class="row justify-content-between text-left">
                         <div class="form-group col-12 flex-column d-flex"> <label class="form-control-label px-3">Purpose of Visit<span class="text-danger"> *</span></label>
-                            <textarea  name="p_visit" placeholder="Enter Purpose of Visit" required> </textarea></div>
+                            <textarea  name="p_visit" value="<?=$check['p_visit']?>" placeholder="Enter Purpose of Visit" required> </textarea>
+                        </div>
                     </div>
                     <div class="row justify-content-end">
                         <div class="form-group col-sm-4">
-                            <button type="submit" class="btn-block btn-primary">SUBMIT</button>
+                            <button type="submit" class="btn-block btn-primary">UPDATE CHECK-IN</button>
 
                         </div>
                     </div>

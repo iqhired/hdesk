@@ -62,7 +62,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="login.php">Login</a>
+                <a class="nav-link" href="<?= base_url('loginpage');?>">Login</a>
             </li>
         </ul>
     </div>

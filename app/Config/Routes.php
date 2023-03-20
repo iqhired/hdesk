@@ -34,9 +34,22 @@ $routes->set404Override();
 $routes->get('/', 'Home1::index');
 $routes->get('check_in', 'Home1::checkin');
 $routes->get('check_out', 'Home1::checkout');
+$routes->get('loginpage', 'Home1::login');
+$routes->get('checkintable', 'Home1::tablecheckin');
+$routes->get('editcheckin/(:num)', 'Home1::editcheckin/$1');
+
 
 $routes->post('checkin_store', 'Home1::store');
 $routes->post('checkout_store', 'Home1::storeout');
+
+
+$routes->post('check/updatein/(:num)', 'Home1::updatein/$1');
+$routes->get('deletecheckin/(:num)', 'Home1::deletecheckin/$1');
+
+
+
+
+$routes->post('login_store', 'Home1::loginstore');
 
 
 

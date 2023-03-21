@@ -15,7 +15,9 @@ class Home1 extends BaseController
 
     public function checkin()
     {
+
         return view('check/check_in');
+
     }
 
     public function checkout()
@@ -39,6 +41,7 @@ class Home1 extends BaseController
             'p_visit' => $this->request->getPost('p_visit'),
         ];
         $checkinn->save($data);
+
         return redirect()->to(base_url('/'))->with('status','User Checkin Succesfully');
 
     }
@@ -58,20 +61,32 @@ class Home1 extends BaseController
     }
     public function login()
     {
+
         return view('check/login');
     }
 
     public function loginstore()
     {
         $loginn = new login_detail();
-        $data = [
-            'u_name' => $this->request->getPost('u_name'),
+       $result = $loginn->where('u_name',$this->request ->getVar('u_name'))->first();
+       if($result!=null)
+       {
+           if($result['pass']==$this->request->getVar('pass'))
+           {
+               return redirect()->to(base_url('/'))->with('status','User Login Successfully');
+           }
+           else{
+               return redirect()->to(base_url('loginpage'))->with('status','User Login Successfully');
 
-            'pass' => $this->request->getPost('pass'),
 
-        ];
-        $loginn->save($data);
-        return redirect()->to(base_url('/'))->with('status','User Login Successfully');
+           }
+
+       }
+       else
+       {
+           return redirect()->to(base_url('loginpage'))->with('status','User Login Successfully');
+       }
+
 
     }
 

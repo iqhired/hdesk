@@ -15,4 +15,5 @@ class checkin_details extends Model{
 
     ];
 
+
 }

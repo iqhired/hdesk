@@ -40,6 +40,7 @@ session_start();
             <li class="nav-item active">
                 <a class="nav-link" href="<?= base_url('checkintable');?>">Check-in Details <span class="sr-only">(current)</span></a>
             </li>
+            
         </ul>
     </div>
 </nav>

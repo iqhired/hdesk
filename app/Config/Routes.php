@@ -40,6 +40,7 @@ $routes->get('editcheckin/(:num)', 'Home1::editcheckin/$1');
 
 
 $routes->post('checkin_store', 'Home1::store');
+
 $routes->post('checkout_store', 'Home1::storeout');
 
 
@@ -50,6 +51,7 @@ $routes->get('deletecheckin/(:num)', 'Home1::deletecheckin/$1');
 
 
 $routes->post('login_store', 'Home1::loginstore');
+
 
 
 

@@ -120,6 +120,7 @@
             }
 
             .logo_img {
+
                 height: auto;
                 width: 250px;
                 margin-left: 180px;

@@ -46,6 +46,7 @@
                 <div class="card rounded-3 text-black" style="box-shadow: 0 12px 20px -10px rgb(59 149 163 / 28%), 0 4px 20px 0px rgb(0 0 0 / 12%), 0 7px 8px -5px rgb(59 149 163 / 20%);">
                     <div class="row g-0">
                         <div class="col-lg-12" >
+
                             <div class="card-body p-md-5 mx-md-4" >
                                 <form action="<?= base_url('login_store');?>" method="post">
                                     <div class="text-center">

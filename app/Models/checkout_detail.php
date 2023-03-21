@@ -12,7 +12,6 @@ class checkout_detail extends Model
         'f_name',
         'c_name',
 
-
     ];
 
 }

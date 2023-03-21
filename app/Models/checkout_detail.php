@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 
 class checkout_detail extends Model
 {
-    protected $table = 'check_out';
+    protected $table = 'hdesk_entry';
     protected $primaryKey = 'id';
     protected $allowedFields = [
         'f_name',

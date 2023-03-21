@@ -37,52 +37,119 @@
 
             margin-top:200px;
             margin-left:240px;
-            padding: 100px;
+            padding: 75px;
         }
 
         .btn-danger {
 
             margin-top:200px;
             margin-left:500px;
-            padding: 100px;
+            padding: 75px;
         }
+        .logo_img {
+            height: auto;
+            width: 187px;
+            margin-left: 617px;
+        }
+
+        a {
+            color: #142434;
+            text-decoration: none;
+            background-color: transparent;
+        }
+        body{
+            font-size: 20px;
+        }
+
+        .pushable {
+            background: hsl(340deg 100% 32%);
+            border-radius: 12px;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            outline-offset: 4px;
+            max-resolution: res;
+            margin-top: 240px;
+            margin-left: 334px;
+
+        }
+
+        .front {
+            display: block;
+            padding: 40px 60px;
+            border-radius: 12px;
+            font-size: 1.25rem;
+            background: hsl(345deg 100% 47%);
+            color: white;
+            transform: translateY(-6px);
+
+        }
+
+        .pushable:active .front {
+            transform: translateY(-2px);
+        }
+
+
+        @media (max-width: 800px) {
+
+            .pushable {
+                background: hsl(340deg 100% 32%);
+                border-radius: 12px;
+                border: none;
+                padding: 0;
+                cursor: pointer;
+                outline-offset: 4px;
+                max-resolution: res;
+                margin-top: 200px;
+                margin-left: 220px;
+            }
+
+            .front {
+                display: block;
+                padding: 40px 30px;
+                border-radius: 12px;
+                font-size: 1.25rem;
+                background: hsl(345deg 100% 47%);
+                color: white;
+                transform: translateY(-6px);
+
+            }
+
+            .pushable:active .front {
+                transform: translateY(-2px);
+            }
+
+            .logo_img {
+                height: auto;
+                width: 250px;
+                margin-left: 180px;
+            }
+        }
+
+
     </style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="<?= base_url('/');?>">COMAPANY NAME</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="<?= base_url('/');?>">Home <span class="sr-only">(current)</span></a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('loginpage');?>">Login</a>
-            </li>
-        </ul>
-    </div>
-
-</nav>
-<div class="row row-xs">
-    <a href="<?= base_url('check_in');?>">
-        <button type="button" class="btn btn-primary" style="background-color:#2a7c4f;box-shadow: 0 12px 20px -10px rgb(59 149 163 / 28%), 0 4px 20px 0px rgb(0 0 0 / 12%), 0 7px 8px -5px rgb(59 149 163 / 20%);">CHECK-IN</button>
+    <a class="navbar-brand" href="<?= base_url('/');?>">
+        <image class="logo_img" src="public/assets/img/site_logo.png" alt="logo">
     </a>
+
+<div class="col-lg-12" >
+
+    <div class="row row-xs">
+        <a href="<?= base_url('check_in');?>">
+            <button class="pushable "><span class="front " style="background-color:#2a7c4f;">CHECK -IN</span></button>
+
+        </a>
 
         <a href="<?= base_url('check_out');?>">
-
-
-        <button type="button" class="btn btn-danger">CHECK-OUT</button>
-    </a>
+            <button class="pushable"><span class="front">CHECK-OUT</span></button>
+        </a>
+    </div>
 </div>
 </br>
-<footer>
-    <p class="p-3 bg-dark text-white text-center">@companyname.com</p>
-</footer>
+
 </body>
 </html>
 

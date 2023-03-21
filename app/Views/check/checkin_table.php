@@ -26,14 +26,27 @@
             box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
             margin-left: -98px;
         }
+        .logo_img{
+            height:auto;
+            width:150px;
+        }
+
+        a {
+            color: #142434;
+            text-decoration: none;
+            background-color: transparent;
+        }
 
 
         body{color: #000;overflow-x: hidden;height: 100%;background-repeat: no-repeat;background-size: 100% 100%}.card{padding: 30px 40px;margin-top: 60px;margin-bottom: 60px;border: none !important;box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2)}.blue-text{color: #00BCD4}.form-control-label{margin-bottom: 0}input, textarea, button{padding: 8px 15px;border-radius: 5px !important;margin: 5px 0px;box-sizing: border-box;border: 1px solid #ccc;font-size: 18px !important;font-weight: 300}input:focus, textarea:focus{-moz-box-shadow: none !important;-webkit-box-shadow: none !important;box-shadow: none !important;border: 1px solid #00BCD4;outline-width: 0;font-weight: 400}.btn-block{text-transform: uppercase;font-size: 15px !important;font-weight: 400;height: 43px;cursor: pointer}.btn-block:hover{color: #fff !important}button:focus{-moz-box-shadow: none !important;-webkit-box-shadow: none !important;box-shadow: none !important;outline-width: 0}
     </style>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="<?= base_url('/');?>">COMAPANY NAME</a>
+<nav class="navbar navbar-expand-lg " style="background-color: #c2ccd5">
+    <a class="navbar-brand" href="<?= base_url('/');?>">
+        <image class="logo_img" src="public/assets/img/site_logo.png" alt="logo">
+
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -85,7 +98,7 @@
                             <td><?= $row['mobile'] ?></td>
                             <td><?= $row['c_name'] ?></td>
                             <td><?= $row['p_visit'] ?></td>
-                            <td><?= $row['created_at'] ?></td>
+                            <td><?= $row['checkin_time'] ?></td>
                             <td></td>
 
 

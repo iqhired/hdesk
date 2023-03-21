@@ -54,11 +54,11 @@
 
                                     <div class="form-outline mb-4">
                                         <input type="text" name="u_name" id="" class="form-control"
-                                               placeholder="Phone number or email address" />
+                                               placeholder="Phone number or email address" required/>
                                     </div>
 
                                     <div class="form-outline mb-4">
-                                        <input type="password" name="pass" id="" class="form-control" placeholder="Password" />
+                                        <input type="password" name="pass" id="" class="form-control" placeholder="Password" required />
                                     </div>
 
                                     <div class="text-center pt-1 mb-5 pb-1">

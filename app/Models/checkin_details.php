@@ -3,7 +3,7 @@
 use CodeIgniter\Model;
 
 class checkin_details extends Model{
-    protected $table = 'check_in';
+    protected $table = 'hdesk_entry';
     protected $primaryKey = 'id';
     protected $allowedFields = [
         'f_name',

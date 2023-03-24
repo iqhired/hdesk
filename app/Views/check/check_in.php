@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <head>
     <title></title>
@@ -11,6 +8,15 @@ session_start();
 
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
     <style>
+        body {
+            font-size: 20px;
+        }
+        .card{
+            background-image:url('public/assets/img/patternimg.avif');
+
+
+
+        }
         .w-50 {
             width: 64%!important;
         }
@@ -31,7 +37,15 @@ session_start();
         .logo_img {
             height: auto;
             width: 187px;
-            margin-left: 617px;
+            margin-left: 650px;
+        }
+        .btn-success {
+            color: #fff;
+            background-color: #3d7e4c;
+            border-color: #28a745;
+            padding: 6px 20px;
+            margin-left: -110px;
+
         }
 
         @media (max-width: 800px) {
@@ -109,7 +123,7 @@ if(isset($_SESSION['status']))
                     </div>
                     <div class="row justify-content">
                         <div class="form-group col-sm-4">
-                            <button type="submit" class="btn-block btn-primary">SUBMIT</button>
+                            <button type="submit" class="btn btn-success">CHECK-IN</button>
 
                         </div>
                     </div>

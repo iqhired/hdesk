@@ -31,30 +31,66 @@
             margin-left: 650px;
         }
 
-        .btn-danger {
-            color: #fff;
+        .logo_images {
+            height: auto;
+            width: 130px;
+            margin-left: 170px;
 
-            border-color: #28a745;
-            padding: 6px 20px;
-            margin-left: -90px;
 
         }
 
+        .logo_imag{
+            height: auto;
+            width:150px;
+            margin-left: 170px;
+            margin-left: 170px;
+
+        }
+
+        .card {
+            padding: 24px 40px;
+            margin-top: 100px;
+
+            box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
+        }
+
+        .container-fluid {
+            width: 100%;
+            padding-right: 69px;
+            padding-left: 80px;
+            margin-right: 50px;
+            margin-left: auto;
+        }
+
+        .container-fluid.px-7.py-md-5 {
+            margin-top: 70px;
+        }
+
+        .card {
+            padding: 30px 40px;
+            margin-top: 60px;
+            margin-bottom: 60px;
+            border: none !important;
+            box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
+            background-color: #b8dbd2;
+        }
 
         @media (max-width: 800px) {
 
 
-            .logo_img {
+            .logo_imag {
                 height: auto;
-                width: 250px;
-                margin-left: 180px;
+                width: 150px;
+                margin-left: 100px;
             }
-            .btn-danger {
-                color: #fff;
+            .container-fluid.px-7.py-md-5 {
+                margin-top: 165px;
+            }
+            .logo_images {
+                height: auto;
+                width: 200px;
+                margin-left: 80px;
 
-                border-color: #28a745;
-                padding: 6px 20px;
-                margin-left: -12px;
 
             }
         }
@@ -65,10 +101,6 @@
 
 </head>
 <body>
-<a class="navbar-brand" href="<?= base_url('/');?>">
-    <image class="logo_img" src="public/assets/img/site_logo.png" alt="logo">
-
-</a>
 
 
 
@@ -87,43 +119,18 @@ if(isset($_SESSION['status']))
 }
 ?>
 
-<form action="<?= base_url('checkout_store');?>" method="post">
-
-<div class="container-fluid px-1 py-1 mx-auto">
-
+<div class="container-fluid px-7 py-md-5 ">
     <div class="row d-flex justify-content-center">
-        <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
-
+        <div class="col-xl-5 col-lg-12 col-md-9 col-11 text-center">
             <div class="card">
-                <b><h5 class="text-center mb-4">CHECK-OUT</h5></b>
-                <div class="row justify-content-between text-left">
-                    <div class="form-group col-sm-12 flex-column d-flex">
-                        <label class="form-control-label px-3">First name<span class="text-danger"> *</span></label>
-                        <input type="text" id="fname" name="f_name" placeholder="Enter your first name" required >
-                    </div>
-
-                </div>
-
-                <div class="row justify-content-between text-left">
-                    <div class="form-group col-sm-12 flex-column d-flex">
-                        <label class="form-control-label px-3">Company Name<span class="text-danger"> *</span></label>
-                        <input type="text" name="c_name" placeholder="Enter Company Name" required>
-                    </div>
-                </div>
-
-                <div class="row justify-content">
-                    <div class="form-group col-sm-4">
-                        <button type="submit" class="btn btn-danger">CHECK-OUT</button>
-                    </div>
-                </div>
-                </form>
+                <image class="logo_images" src="public/assets/img/emoji.gif" alt="logo">
+                    <h2><b>THANK YOU FOR VISITING!!! </b></h2>
+                    <h2><b>See You Again Soon... </b></h2>
+                    <image class="logo_imag" src="public/assets/img/site_logo.png" alt="logo">
             </div>
         </div>
     </div>
 </div>
-
-
-
 
 </body>
 </html>

@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Models\checkin_details;
 use App\Models\checkout_detail;
 use App\Models\login_detail;
+use App\Models\user_login;
 
 class Home1 extends BaseController
 {
@@ -18,15 +19,44 @@ class Home1 extends BaseController
 
         return view('check/check_in');
 
+
+    }
+
+    public function checkin1()
+    {
+
+        return view('check/check_in1');
+
+
+    }
+    public function checkinmsg()
+    {
+
+        return view('check/checkin_msg');
     }
 
     public function checkout()
     {
         return view('check/check_out');
     }
+
+    public function checkout1()
+    {
+        return view('check/check_out1');
+    }
+    public function checkoutmsg()
+    {
+
+        return view('check/checkout_msg');
+    }
     public function homepage()
     {
         return view('check/homepage');
+    }
+
+    public function homepage1()
+    {
+        return view('check/homepage1');
     }
 
     public function store()
@@ -42,7 +72,7 @@ class Home1 extends BaseController
         ];
         $checkinn->save($data);
 
-        return redirect()->to(base_url('/'))->with('status','User Checkin Succesfully');
+        return redirect()->to(base_url('checkin_msg'))->with('status','User Checkin Succesfully');
 
     }
 
@@ -56,7 +86,7 @@ class Home1 extends BaseController
 
         ];
         $checkoutt->save($data);
-        return redirect()->to(base_url('/'))->with('status','User checkout Succesfully');
+        return redirect()->to(base_url('checkout_msg'))->with('status','User checkout Succesfully');
 
     }
     public function login()
@@ -64,6 +94,24 @@ class Home1 extends BaseController
 
         return view('check/login');
     }
+    public function userlogin()
+    {
+
+        return view('check/user_login');
+    }
+    public function userstore()
+    {
+        $user = new user_login();
+        $data = [
+            'u_name' => $this->request->getPost('u_name'),
+
+            'pass' => $this->request->getPost('pass'),
+
+        ];
+        $user->save($data);
+        return redirect()->to(base_url('homepage'))->with('status','User checkout Succesfully');
+    }
+
 
     public function loginstore()
     {
@@ -73,7 +121,7 @@ class Home1 extends BaseController
        {
            if($result['pass']==$this->request->getVar('pass'))
            {
-               return redirect()->to(base_url('/'))->with('status','User Login Successfully');
+               return redirect()->to(base_url('homepage'))->with('status','User Login Successfully');
            }
            else{
                return redirect()->to(base_url('loginpage'))->with('status','User Login Successfully');
@@ -132,9 +180,49 @@ class Home1 extends BaseController
         $check->delete($id);
         return redirect()->to(base_url('checkintable'))->with('status','Check in deleted  Successfully');
 
+    }
 
+
+    public function logintable()
+    {
+        {
+            $user = new user_login();
+
+            $data['user'] = $user->findAll();
+            return view('check/user_table',$data);
+        }
+    }
+
+    public function editlogin($id)
+    {
+        $user = new user_login();
+        $data['user'] = $user->find($id);
+        return view('check/edit_login',$data);
 
     }
+
+    public function updatelogin($id)
+    {
+        $user = new user_login();
+        $user->find($id);
+        $data = [
+            'u_name' => $this->request->getPost('u_name'),
+            'pass' => $this->request->getPost('pass'),
+
+        ];
+        $user->update($id,$data);
+        return redirect()->to(base_url('login_table'))->with('status','Check in details Updated  Successfully');
+
+    }
+
+    public function deletelogin($id)
+    {
+        $user = new user_login();
+        $user->delete($id);
+        return redirect()->to(base_url('login_table'))->with('status','Check in deleted  Successfully');
+
+    }
+
 
 
 

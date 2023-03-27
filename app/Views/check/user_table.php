@@ -7,10 +7,6 @@
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('public/assets/css/bootstrap4.min.css')?>">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('public/assets/css/dataTables.css')?>">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('public/assets/css/dataTables.min.js')?>">
-
-
-
-
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
     <script>
         $(document).ready(function () {
@@ -89,12 +85,19 @@
             <div class="card">
                 <div class="card-header">
                     <h4>USER DETAILS</h4>
+                    <div class="col-md-6">
+                        <a href="<?php echo base_url('exportData');?>" class="btn btn-success">EXPORT
+                        </a>
+                    </div>
                 </div>
+
                 <div class="card-body">
                     <table class="table table-bordered" id="mydatatable" style="width:100%;">
                         <thead>
                         <tr>
                             <th>ID</th>
+                            <th>Name</th>
+                            <th>Role</th>
                             <th>Username</th>
                             <th>Password</th>
                             <th>Action</th>
@@ -105,6 +108,10 @@
                         <?php foreach($user as $row) : ?>
                             <tr>
                                 <td><?= $row['id'] ?></td>
+                                <td><?= $row['name'] ?></td>
+                                <td><?= $row['role'] ?></td>
+
+
                                 <td><?= $row['u_name'] ?></td>
                                 <td><?= $row['pass'] ?></td>
                                 <td>

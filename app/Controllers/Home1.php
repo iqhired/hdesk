@@ -7,6 +7,9 @@ use App\Models\checkout_detail;
 use App\Models\login_detail;
 use App\Models\user_login;
 
+
+
+
 class Home1 extends BaseController
 {
     public function index()
@@ -49,6 +52,11 @@ class Home1 extends BaseController
 
         return view('check/checkout_msg');
     }
+
+    public function log_detail()
+    {
+        return view('check/logs');
+    }
     public function homepage()
     {
         return view('check/homepage');
@@ -76,19 +84,7 @@ class Home1 extends BaseController
 
     }
 
-    public function storeout()
-    {
-        $checkoutt = new checkout_detail();
-        $data = [
-            'f_name' => $this->request->getPost('f_name'),
 
-            'c_name' => $this->request->getPost('c_name'),
-
-        ];
-        $checkoutt->save($data);
-        return redirect()->to(base_url('checkout_msg'))->with('status','User checkout Succesfully');
-
-    }
     public function login()
     {
 
@@ -103,8 +99,9 @@ class Home1 extends BaseController
     {
         $user = new user_login();
         $data = [
+            'name' => $this->request->getPost('name'),
+            'role' => $this->request->getPost('role'),
             'u_name' => $this->request->getPost('u_name'),
-
             'pass' => $this->request->getPost('pass'),
 
         ];
@@ -191,6 +188,7 @@ class Home1 extends BaseController
             $data['user'] = $user->findAll();
             return view('check/user_table',$data);
         }
+
     }
 
     public function editlogin($id)
@@ -220,6 +218,29 @@ class Home1 extends BaseController
         $user = new user_login();
         $user->delete($id);
         return redirect()->to(base_url('login_table'))->with('status','Check in deleted  Successfully');
+
+    }
+
+    public function storeout()
+    {
+        $checkk = new checkout_detail();
+        $result = $checkk->where('f_name',$this->request ->getVar('f_name'))->first();
+        if($result!=null)
+        {
+            if($result['c_name']==$this->request->getVar('c_name'))
+            {
+                return redirect()->to(base_url('homepage'))->with('status','User checkout Successfully');
+            }
+            else{
+                return redirect()->to(base_url('check_outt'))->with('status','Error');
+            }
+
+        }
+        else
+        {
+            return redirect()->to(base_url('check_outt'))->with('status','Error');
+        }
+
 
     }
 

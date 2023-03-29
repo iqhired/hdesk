@@ -32,45 +32,50 @@ $routes->set404Override();
 
 
 $routes->get('/', 'Home1::index');
+$routes->get('homepage', 'Home1::homepage1');
+
 
 $routes->get('check_in', 'Home1::checkin');
+$routes->get('check_inn', 'Home1::checkin1');
+
 $routes->get('checkin_msg', 'Home1::checkinmsg');
 $routes->get('checkintable', 'Home1::tablecheckin');
 $routes->get('editcheckin/(:num)', 'Home1::editcheckin/$1');
+$routes->post('check/updatein/(:num)', 'Home1::updatein/$1');
+$routes->get('deletecheckin/(:num)', 'Home1::deletecheckin/$1');
 $routes->post('checkin_store', 'Home1::store');
-
-
-$routes->get('homepage', 'Home1::homepage1');
 
 $routes->get('check_out', 'Home1::checkout');
 $routes->get('checkout_msg', 'Home1::checkoutmsg');
 
 
-
-
-$routes->post('checkout_store', 'Home1::storeout');
-$routes->post('check/updatein/(:num)', 'Home1::updatein/$1');
-$routes->get('deletecheckin/(:num)', 'Home1::deletecheckin/$1');
-
-
-
 $routes->get('loginpage', 'Home1::login');
-
 $routes->post('login_store', 'Home1::loginstore');
 
 $routes->get('user_login', 'Home1::userlogin');
-
 $routes->post('user_store', 'Home1::userstore');
-
-
 $routes->get('login_table', 'Home1::logintable');
-$routes->get('check_inn', 'Home1::checkin1');
-
 $routes->get('editlogin/(:num)', 'Home1::editlogin/$1');
 $routes->post('check/updatelogin/(:num)', 'Home1::updatelogin/$1');
 $routes->get('deletelogin/(:num)', 'Home1::deletelogin/$1');
 
 $routes->get('check_outt', 'Home1::checkout1');
+$routes->get('logs', 'Home1::log_detail');
+$routes->post('checkout_store', 'Home1::storeout');
+
+
+$routes->get('/', 'UsersController::index');
+$routes->get('exportData', 'UsersController::exportData');
+
+$routes->get('/', 'UsersController1::index');
+$routes->get('exportData1', 'UsersController1::exportData');
+
+
+
+
+
+
+
 
 
 

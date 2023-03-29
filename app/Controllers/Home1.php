@@ -7,9 +7,6 @@ use App\Models\checkout_detail;
 use App\Models\login_detail;
 use App\Models\user_login;
 
-
-
-
 class Home1 extends BaseController
 {
     public function index()
@@ -21,8 +18,6 @@ class Home1 extends BaseController
     {
 
         return view('check/check_in');
-
-
     }
 
     public function checkin1()
@@ -87,12 +82,10 @@ class Home1 extends BaseController
 
     public function login()
     {
-
         return view('check/login');
     }
     public function userlogin()
     {
-
         return view('check/user_login');
     }
     public function userstore()
@@ -229,7 +222,7 @@ class Home1 extends BaseController
         {
             if($result['c_name']==$this->request->getVar('c_name'))
             {
-                return redirect()->to(base_url('homepage'))->with('status','User checkout Successfully');
+                return redirect()->to(base_url('checkout_msg'))->with('status','User checkout Successfully');
             }
             else{
                 return redirect()->to(base_url('check_outt'))->with('status','Error');

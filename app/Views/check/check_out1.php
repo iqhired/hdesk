@@ -8,6 +8,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
     <style>
+
         .w-50 {
             width: 64%!important;
         }

@@ -119,18 +119,11 @@ if(isset($_SESSION['status']))
 
                         </div>
                     </div>
-</form>
+                </form>
+            </div>
+       </div>
+    </div>
 </div>
-</div>
-</div>
-</div>
-
-
-
-
-<footer>
-    <p class="p-3 bg-dark text-white text-center">@company.com</p>
-</footer>
 
 </body>
 </html>

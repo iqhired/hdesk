@@ -6,6 +6,14 @@
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('public/assets/css/style.css')?>">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('public/assets/css/bootstrap4.min.css')?>">
 
+
+    <link rel="stylesheet"  href="//cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    <script src="//cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script>
+        let table = new DataTable('#myTable');
+    </script>
+
+
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
     <style>
         .w-50 {
@@ -38,13 +46,13 @@
             text-decoration: none;
             background-color: transparent;
         }
-        bi bi-house{
-            width:40px;
-            height:20px;
-
+        .btn-primary {
+            color: #fff;
+            background-color: #4c5292;
+            border-color: #007bff;
+            margin-left: 192%;
+            margin-top: -65px;
         }
-
-
         body{color: #000;overflow-x: hidden;height: 100%;background-repeat: no-repeat;background-size: 100% 100%}.card{padding: 30px 40px;margin-top: 60px;margin-bottom: 60px;border: none !important;box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2)}.blue-text{color: #00BCD4}.form-control-label{margin-bottom: 0}input, textarea, button{padding: 8px 15px;border-radius: 5px !important;margin: 5px 0px;box-sizing: border-box;border: 1px solid #ccc;font-size: 18px !important;font-weight: 300}input:focus, textarea:focus{-moz-box-shadow: none !important;-webkit-box-shadow: none !important;box-shadow: none !important;border: 1px solid #00BCD4;outline-width: 0;font-weight: 400}.btn-block{text-transform: uppercase;font-size: 15px !important;font-weight: 400;height: 43px;cursor: pointer}.btn-block:hover{color: #fff !important}button:focus{-moz-box-shadow: none !important;-webkit-box-shadow: none !important;box-shadow: none !important;outline-width: 0}
     </style>
 </head>
@@ -77,9 +85,13 @@
             <div class="card">
                 <div class="card-header">
                     <h4>CHECK IN DETAILS</h4>
+                    <div class="col-md-6">
+                        <a href="<?php echo base_url('exportData1');?>" class="btn btn-primary">EXPORT
+                        </a>
+                    </div>
                 </div>
                 <div class="card-body">
-                    <table class="table table-bordered" style="width:100%;">
+                    <table class="table table-bordered" id="myTable" style="width:100%;">
                         <thead>
                         <tr>
                             <th>ID</th>
@@ -91,12 +103,9 @@
                             <th>Purpose of visit</th>
                             <th>Check In </th>
                             <th>Check Out</th>
-
                             <th>Action</th>
 
                         </tr>
-
-
                         </thead>
                         <tbody>
                         <?php foreach($check as $row) : ?>
@@ -134,6 +143,7 @@
         </div>
         </div>
     </div>
+
 </body>
 
 

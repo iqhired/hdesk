@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <head>
     <title></title>
@@ -96,7 +93,8 @@ if(isset($_SESSION['status']))
                             <input type="text" id="fname" name="f_name" placeholder="Enter your first name" required >
                         </div>
                         <div class="form-group col-sm-6 flex-column d-flex">
-                            <label class="form-control-label px-3">Last name<span class="text-danger"></span></label> <input type="text" id="lname" name="l_name" placeholder="Enter your last name" >
+                            <label class="form-control-label px-3">Last name<span class="text-danger"></span></label>
+                            <input type="text" id="lname" name="l_name" placeholder="Enter your last name" >
                         </div>
                     </div>
                     <div class="row justify-content-between text-left">

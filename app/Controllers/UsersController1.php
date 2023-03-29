@@ -2,14 +2,14 @@
 
 namespace App\Controllers;
 
-use App\Models\user_login;
+use App\Models\checkin_details;
 
-class Userscontroller extends BaseController
+class UsersController1 extends BaseController
 {
     public function index(){
 
         // Get data
-        $users = new user_login();
+        $users = new checkin_details();
         $data['users'] = $users->select('*')->findAll();
 
         return view('index',$data);
@@ -23,13 +23,13 @@ class Userscontroller extends BaseController
         header("Content-Type: application/csv; ");
 
         // get data
-        $users = new user_login();
+        $users = new checkin_details();
         $usersData = $users->select('*')->findAll();
 
         // file creation
         $file = fopen('php://output', 'w');
 
-        $header = array("ID","Name","Role","Username","Password","Created_time","LoginTime");
+        $header = array("ID","First Name","Last Name","Email","Phone No.","Company Name","Purpose Of Visit","Check In","CheckOut","Total Time");
         fputcsv($file, $header);
         foreach ($usersData as $key=>$line){
             fputcsv($file,$line);
@@ -37,5 +37,6 @@ class Userscontroller extends BaseController
         fclose($file);
         exit;
     }
+
 
 }

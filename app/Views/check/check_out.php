@@ -99,7 +99,7 @@ if(isset($_SESSION['status']))
                 <div class="row justify-content-between text-left">
                     <div class="form-group col-sm-12 flex-column d-flex">
                         <label class="form-control-label px-3">First name<span class="text-danger"> *</span></label>
-                        <input type="text" id="fname" name="f_name" placeholder="Enter your first name" required >
+                        <input type="text"  name="f_name"  placeholder="Enter your first name" required >
                     </div>
 
                 </div>

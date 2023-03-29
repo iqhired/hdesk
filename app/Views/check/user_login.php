@@ -99,6 +99,18 @@
                     <b><h5 class="text-center mb-4">ADD USER</h5></b>
                     <div class="row justify-content-between text-left">
                         <div class="form-group col-sm-12 flex-column d-flex">
+                            <label class="form-control-label px-3">Name<span class="text-danger"> *</span></label>
+                            <input type="text"  name="name" placeholder="Enter Name" required >
+                        </div>
+                    </div>
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-sm-12 flex-column d-flex">
+                            <label class="form-control-label px-3">Role<span class="text-danger"> *</span></label>
+                            <input type="text"  name="role" placeholder="Enter Role" required >
+                        </div>
+                    </div>
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-sm-12 flex-column d-flex">
                             <label class="form-control-label px-3">Username<span class="text-danger"> *</span></label>
                             <input type="text"  name="u_name" placeholder="Enter Username" required >
                         </div>
@@ -114,7 +126,6 @@
                     <div class="row justify-content">
                         <div class="form-group col-sm-4">
                             <button type="submit" class="btn btn-success">CREATE</button>
-
                         </div>
                     </div>
 </form>

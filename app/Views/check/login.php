@@ -76,6 +76,4 @@
         </div>
     </div>
 </section>
-<footer>
-    <p class="p-3 bg-dark text-white text-center">@company.com</p>
-</footer>
+

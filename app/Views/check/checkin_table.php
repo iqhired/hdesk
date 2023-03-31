@@ -31,8 +31,8 @@
             margin-top: 60px;
             margin-bottom: 60px;
             border: none !important;
+            margin-left: -17%;
             box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
-            margin-left: -98px;
         }
         .logo_img {
             height: auto;
@@ -53,6 +53,8 @@
             margin-left: 192%;
             margin-top: -65px;
         }
+
+
         body{color: #000;overflow-x: hidden;height: 100%;background-repeat: no-repeat;background-size: 100% 100%}.card{padding: 30px 40px;margin-top: 60px;margin-bottom: 60px;border: none !important;box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2)}.blue-text{color: #00BCD4}.form-control-label{margin-bottom: 0}input, textarea, button{padding: 8px 15px;border-radius: 5px !important;margin: 5px 0px;box-sizing: border-box;border: 1px solid #ccc;font-size: 18px !important;font-weight: 300}input:focus, textarea:focus{-moz-box-shadow: none !important;-webkit-box-shadow: none !important;box-shadow: none !important;border: 1px solid #00BCD4;outline-width: 0;font-weight: 400}.btn-block{text-transform: uppercase;font-size: 15px !important;font-weight: 400;height: 43px;cursor: pointer}.btn-block:hover{color: #fff !important}button:focus{-moz-box-shadow: none !important;-webkit-box-shadow: none !important;box-shadow: none !important;outline-width: 0}
     </style>
 </head>
@@ -91,7 +93,7 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <table class="table table-bordered" id="myTable" style="width:100%;">
+                    <table class="table table-bordered" id="check" style="width:100%;">
                         <thead>
                         <tr>
                             <th>ID</th>
@@ -108,6 +110,7 @@
                         </tr>
                         </thead>
                         <tbody>
+                        <?php if($check): ?>
                         <?php foreach($check as $row) : ?>
                         <tr>
                             <td><?= $row['id'] ?></td>
@@ -134,11 +137,23 @@
                             </td>
                         </tr>
                         <?php endforeach; ?>
+                        <?php endif; ?>
 
                         </tbody>
                     </table>
                 </div>
             </div>
+                <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+                <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+
+                <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" type="text/javascript"></script>
+
+                <script>
+                    $(document).ready( function () {
+                        $('#check').DataTable();
+                    } );
+                </script>
 
         </div>
         </div>

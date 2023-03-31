@@ -12,4 +12,5 @@ class login_detail extends Model
         'pass',
     ];
 
+
 }

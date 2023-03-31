@@ -106,7 +106,7 @@ class Home1 extends BaseController
     public function loginstore()
     {
         $loginn = new login_detail();
-       $result = $loginn->where('u_name',$this->request ->getVar('u_name'))->first();
+        $result = $loginn->where('u_name',$this->request ->getVar('u_name'))->first();
        if($result!=null)
        {
            if($result['pass']==$this->request->getVar('pass'))
@@ -115,7 +115,6 @@ class Home1 extends BaseController
            }
            else{
                return redirect()->to(base_url('loginpage'))->with('status','User Login Successfully');
-
 
            }
 

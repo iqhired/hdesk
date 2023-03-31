@@ -13,9 +13,6 @@
         }
         .card{
             background-image:url('public/assets/img/patternimg.avif');
-
-
-
         }
         .w-50 {
             width: 64%!important;

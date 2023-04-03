@@ -56,14 +56,13 @@
 
         .container-fluid {
             width: 100%;
-            padding-right: 69px;
-            padding-left: 80px;
-            margin-right: 50px;
-            margin-left: auto;
+            padding-right: 324px;
+            padding-left: 189px;
+            margin-right: 20px;
+            margin-left: 90px;
         }
-
         .container-fluid.px-7.py-md-5 {
-            margin-top: 70px;
+            margin-top: 162px;
         }
 
         .card {

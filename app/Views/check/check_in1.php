@@ -116,7 +116,7 @@ if(isset($_SESSION['status']))
                     </div>
                     <div class="row justify-content-between text-left">
                         <div class="form-group col-12 flex-column d-flex"> <label class="form-control-label px-3">Purpose of Visit<span class="text-danger"> *</span></label>
-                            <textarea  name="p_visit" placeholder="Enter Purpose of Visit" required> </textarea></div>
+                            <input type="text" name="p_visit" placeholder="Enter Purpose of Visit" required> </textarea></div>
                     </div>
                     <div class="row justify-content">
                         <div class="form-group col-sm-4">

@@ -34,7 +34,7 @@
         .logo_images {
             height: auto;
             width: 200px;
-            margin-left: 150px;
+            margin-left: 96px;
 
 
         }
@@ -53,13 +53,12 @@
 
             box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
         }
-
         .container-fluid {
-            width: 100%;
-            padding-right: 69px;
+            width: 73%;
+            padding-right: 118px;
             padding-left: 80px;
-            margin-right: 50px;
-            margin-left: auto;
+            margin-right: 243px;
+            margin-left: 280px;
         }
 
         .container-fluid.px-7.py-md-5 {
@@ -97,20 +96,8 @@
 
 
 
-<?php
-if(isset($_SESSION['status']))
-{
-    ?>
-    <div class = "alert alert-warning alert-dismissible fade show" role="alert">
-        <strong>Hey!!</strong> <?php echo $_SESSION['status']; ?>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-    <?php
-    unset($_SESSION['status']);
-}
-?>
-
     <div class="container-fluid px-7 py-md-5 ">
+
         <div class="row d-flex justify-content-center">
             <div class="col-xl-5 col-lg-12 col-md-9 col-11 text-center">
                 <div class="card">

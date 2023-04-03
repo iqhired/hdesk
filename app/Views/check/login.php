@@ -37,7 +37,15 @@
     </style>
 
 </head>
+<body>
 
+
+    <?php
+    if (session()->getflashdata('status'))
+    {
+        echo "<h4>".session()->getflashdata('status')."</h4>";
+    }
+    ?>
 
 <section class="h-100 gradient-form" style="background-color: #ffffff;" >
     <div class="container py-5 h-100">
@@ -45,12 +53,17 @@
             <div class="col-xl-5">
                 <div class="card rounded-3 text-black" style="box-shadow: 0 12px 20px -10px rgb(59 149 163 / 28%), 0 4px 20px 0px rgb(0 0 0 / 12%), 0 7px 8px -5px rgb(59 149 163 / 20%);">
                     <div class="row g-0">
-                        <div class="col-lg-12" >
+                        <div class="col-lg-12">
+
+
+
+
                             <div class="card-body p-md-5 mx-md-4" >
                                 <form action="<?= base_url('login_store');?>" method="post">
                                     <div class="text-center">
                                         <h5 class="mt-1 mb-5 pb-1">Please login to your account</h5>
                                     </div>
+
 
                                     <div class="form-outline mb-4">
                                         <input type="text" name="u_name" id="" class="form-control"
@@ -75,4 +88,7 @@
         </div>
     </div>
 </section>
+
+</body>
+
 

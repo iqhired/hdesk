@@ -52,13 +52,14 @@
         }
         .logo_img {
             height: auto;
-            width: 167px;
+            width: 124px;
             margin-left: 9px;
         }
 
         .logo_images {
             width: 25px;
             height: 25px;
+            margin-top:-9px;
         }
 
 
@@ -67,6 +68,8 @@
             text-decoration: none;
             background-color: transparent;
         }
+
+
         body{
             font-size: 20px;
         }
@@ -79,8 +82,8 @@
             cursor: pointer;
             outline-offset: 4px;
             max-resolution: res;
-            margin-top: 240px;
-            margin-left: 334px;
+            margin-top: 339px;
+            margin-left: 496px;
 
         }
 
@@ -137,8 +140,53 @@
             .logo_images {
                 width: 25px;
                 height: 25px;
+                margin-top: -12px;
             }
         }
+
+        @media (max-width: 1600px) {
+
+            .pushable {
+                background: hsl(340deg 100% 32%);
+                border-radius: 12px;
+                border: none;
+                padding: 0;
+                cursor: pointer;
+                outline-offset: 4px;
+                max-resolution: res;
+                margin-top: 260px;
+                margin-left: 400px;
+            }
+
+            .front {
+                display: block;
+                padding: 40px 30px;
+                border-radius: 12px;
+                font-size: 1.25rem;
+                background: hsl(345deg 100% 47%);
+                color: white;
+                transform: translateY(-6px);
+
+            }
+
+            .pushable:active .front {
+                transform: translateY(-2px);
+            }
+            .logo_img {
+
+                height: auto;
+                width: 200px;
+                margin-left: 694px;
+                margin-top:60px;
+            }
+            a {
+                color: #142434;
+                text-decoration: none;
+                background-color: transparent;
+                margin-top: -55px;
+            }
+        }
+
 
 
     </style>
@@ -174,9 +222,10 @@
     </div>
 
 </nav>
-<div class="col-lg-12" >
 
 <div class="row row-xs">
+    <div class="col-lg-12" >
+
     <a href="<?= base_url('check_inn');?>">
         <button class="pushable "><span class="front " style="background-color:#2a7c4f;">CHECK-IN</span></button>
 

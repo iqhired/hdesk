@@ -75,6 +75,7 @@ class Home1 extends BaseController
         ];
         $checkinn->save($data);
 
+
         return redirect()->to(base_url('checkin_msg'))->with('status','User Checkin Succesfully');
 
     }
@@ -106,7 +107,7 @@ class Home1 extends BaseController
     public function loginstore()
     {
         $loginn = new login_detail();
-        $result = $loginn->where('u_name',$this->request ->getVar('u_name'))->first();
+       $result = $loginn->where('u_name',$this->request ->getVar('u_name'))->first();
        if($result!=null)
        {
            if($result['pass']==$this->request->getVar('pass'))
@@ -114,14 +115,15 @@ class Home1 extends BaseController
                return redirect()->to(base_url('homepage'))->with('status','User Login Successfully');
            }
            else{
-               return redirect()->to(base_url('loginpage'))->with('status','User Login Successfully');
 
+               return redirect()->to(base_url('loginpage'))->with('status',' Login Successfully');
            }
 
        }
        else
        {
-           return redirect()->to(base_url('loginpage'))->with('status','User Login Successfully');
+
+           return redirect()->to(base_url('loginpage'))->with('status','Invalid Username ');
        }
 
 
@@ -219,12 +221,13 @@ class Home1 extends BaseController
         $result = $checkk->where('f_name',$this->request ->getVar('f_name'))->first();
         if($result!=null)
         {
-            if($result['c_name']==$this->request->getVar('c_name'))
+            if ($result['c_name'] == $this->request->getVar('c_name'))
             {
-                return redirect()->to(base_url('checkout_msg'))->with('status','User checkout Successfully');
+                return redirect()->to(base_url('checkout_msg'))->with('status', 'User checkout Successfully');
             }
-            else{
-                return redirect()->to(base_url('check_outt'))->with('status','Error');
+            else
+            {
+                return redirect()->to(base_url('check_outt'))->with('status', 'Error');
             }
 
         }
@@ -235,12 +238,6 @@ class Home1 extends BaseController
 
 
     }
-
-
-
-
-
-
 
 }
 

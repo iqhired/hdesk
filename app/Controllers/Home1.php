@@ -27,6 +27,7 @@ class Home1 extends BaseController
 
 
     }
+
     public function checkinmsg()
     {
 
@@ -42,6 +43,7 @@ class Home1 extends BaseController
     {
         return view('check/check_out1');
     }
+
     public function checkoutmsg()
     {
 
@@ -52,6 +54,7 @@ class Home1 extends BaseController
     {
         return view('check/logs');
     }
+
     public function homepage()
     {
         return view('check/homepage');
@@ -76,7 +79,7 @@ class Home1 extends BaseController
         $checkinn->save($data);
 
 
-        return redirect()->to(base_url('checkin_msg'))->with('status','User Checkin Succesfully');
+        return redirect()->to(base_url('checkin_msg'))->with('status', 'User Checkin Succesfully');
 
     }
 
@@ -85,10 +88,12 @@ class Home1 extends BaseController
     {
         return view('check/login');
     }
+
     public function userlogin()
     {
         return view('check/user_login');
     }
+
     public function userstore()
     {
         $user = new user_login();
@@ -96,39 +101,30 @@ class Home1 extends BaseController
             'name' => $this->request->getPost('name'),
             'role' => $this->request->getPost('role'),
             'u_name' => $this->request->getPost('u_name'),
-            'pass' => $this->request->getPost('pass'),
+            'pass' => md5($this->request->getPost('pass')),
 
         ];
         $user->save($data);
-        return redirect()->to(base_url('homepage'))->with('status','User checkout Succesfully');
+        return redirect()->to(base_url('homepage'))->with('status', 'User checkout Succesfully');
     }
 
 
     public function loginstore()
     {
+        $session=\Config\Services::session();
+        helper('form');
         $loginn = new login_detail();
-       $result = $loginn->where('u_name',$this->request ->getVar('u_name'))->first();
-       if($result!=null)
-       {
-           if($result['pass']==$this->request->getVar('pass'))
-           {
-               return redirect()->to(base_url('homepage'))->with('status','User Login Successfully');
-           }
-           else{
+        $result = $loginn->where('u_name', $this->request->getVar('u_name'))->where('pass', md5($this->request->getVar('pass')))->first();
+        if ($result){
+            $session->getFlashdata();
+            return redirect()->to(base_url('homepage'))->with('status', 'Logged in Successfully');
+        } else {
+            return redirect()->to(base_url('loginpage'))->with('status', 'Error: Please Insert valid data');
+        }
 
-               return redirect()->to(base_url('loginpage'))->with('status',' Login Successfully');
-           }
-
-       }
-       else
-       {
-
-           return redirect()->to(base_url('loginpage'))->with('status','Invalid Username ');
-       }
 
 
     }
-
 
 
     public function tablecheckin()
@@ -136,7 +132,7 @@ class Home1 extends BaseController
         {
             $check = new checkin_details();
             $data['check'] = $check->findAll();
-            return view('check/checkin_table',$data);
+            return view('check/checkin_table', $data);
         }
     }
 
@@ -144,7 +140,7 @@ class Home1 extends BaseController
     {
         $check = new checkin_details();
         $data['check'] = $check->find($id);
-        return view('check/edit_checkin',$data);
+        return view('check/edit_checkin', $data);
 
     }
 
@@ -160,8 +156,8 @@ class Home1 extends BaseController
             'c_name' => $this->request->getPost('c_name'),
             'p_visit' => $this->request->getPost('p_visit'),
         ];
-         $check->update($id,$data);
-        return redirect()->to(base_url('checkintable'))->with('status','Check in details Updated  Successfully');
+        $check->update($id, $data);
+        return redirect()->to(base_url('checkintable'))->with('status', 'Check in details Updated  Successfully');
 
     }
 
@@ -169,7 +165,7 @@ class Home1 extends BaseController
     {
         $check = new checkin_details();
         $check->delete($id);
-        return redirect()->to(base_url('checkintable'))->with('status','Check in deleted  Successfully');
+        return redirect()->to(base_url('checkintable'))->with('status', 'Check in deleted  Successfully');
 
     }
 
@@ -180,7 +176,7 @@ class Home1 extends BaseController
             $user = new user_login();
 
             $data['user'] = $user->findAll();
-            return view('check/user_table',$data);
+            return view('check/user_table', $data);
         }
 
     }
@@ -189,7 +185,7 @@ class Home1 extends BaseController
     {
         $user = new user_login();
         $data['user'] = $user->find($id);
-        return view('check/edit_login',$data);
+        return view('check/edit_login', $data);
 
     }
 
@@ -202,8 +198,8 @@ class Home1 extends BaseController
             'pass' => $this->request->getPost('pass'),
 
         ];
-        $user->update($id,$data);
-        return redirect()->to(base_url('login_table'))->with('status','Check in details Updated  Successfully');
+        $user->update($id, $data);
+        return redirect()->to(base_url('login_table'))->with('status', 'Check in details Updated  Successfully');
 
     }
 
@@ -211,34 +207,34 @@ class Home1 extends BaseController
     {
         $user = new user_login();
         $user->delete($id);
-        return redirect()->to(base_url('login_table'))->with('status','Check in deleted  Successfully');
+        return redirect()->to(base_url('login_table'))->with('status', 'Check in deleted  Successfully');
 
     }
 
     public function storeout()
     {
+        $session=\Config\Services::session();
+        helper('form');
         $checkk = new checkout_detail();
-        $result = $checkk->where('f_name',$this->request ->getVar('f_name'))->first();
-        if($result!=null)
+        $result = $checkk->where('f_name', $this->request->getVar('f_name'))
+            ->where('c_name', $this->request->getVar('c_name'))->first();
+
+        if ($result)
         {
-            if ($result['c_name'] == $this->request->getVar('c_name'))
-            {
-                return redirect()->to(base_url('checkout_msg'))->with('status', 'User checkout Successfully');
-            }
-            else
-            {
-                return redirect()->to(base_url('check_outt'))->with('status', 'Error');
-            }
-
+            $session->getFlashdata();
+            return redirect()->to(base_url('check_outmsg'))->with('status', 'hiii');
+        } else {
+            return redirect()->to(base_url('check_outt'))->with('status', 'Error');
         }
-        else
-        {
-            return redirect()->to(base_url('check_outt'))->with('status','Error');
-        }
-
-
     }
 
 }
+
+
+
+
+
+
+
 
 

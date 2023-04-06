@@ -19,6 +19,15 @@
         .w-50 {
             width: 64%!important;
         }
+
+        .col-md-6 {
+            -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+            max-width: 67%;
+            margin-left: 600px;
+            margin-top:-41px;
+        }
+
         p {
             margin-top: 80px;
             margin-bottom: 1rem;
@@ -49,7 +58,7 @@
             margin-top: 60px;
             margin-bottom: 60px;
             border: none !important;
-            margin-left: 300px;
+            margin-left: 173px;
             box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
         }
 

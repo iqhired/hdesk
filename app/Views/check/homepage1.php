@@ -172,18 +172,20 @@
             .pushable:active .front {
                 transform: translateY(-2px);
             }
-            .logo_img {
 
+            .logo_img {
                 height: auto;
-                width: 200px;
-                margin-left: 694px;
-                margin-top:60px;
+                width: 134px;
+                margin-left: -6px;
+                margin-top: 16px;
+                margin-bottom: 16px;
             }
             a {
                 color: #142434;
                 text-decoration: none;
                 background-color: transparent;
-                margin-top: -55px;
+                margin-top: -19px;
+                margin-bottom: -16px;
             }
         }
 
@@ -193,7 +195,7 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg " style="background-color: #e8e7f9;background-image:url('public/assets/img/patternimg.avif');">
+<nav class="navbar navbar-expand-lg " style="background-color: #e8e7f9);">
 
     <a class="navbar-brand" href="<?= base_url('homepage');?>">
         <image class="logo_img" src="public/assets/img/site_logo.png" alt="logo">

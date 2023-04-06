@@ -12,7 +12,7 @@
             font-size: 20px;
         }
         .card{
-            background-image:url('public/assets/img/patternimg.avif');
+            background-image:url('public/assets/img/blue.jpeg');
         }
         .w-50 {
             width: 64%!important;
@@ -116,7 +116,7 @@
     <div class="container-fluid px-1 py-1 mx-auto">
         <div class="row d-flex justify-content-center">
             <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
-                <div class="card">
+                <div class="card" >
                     <b><h5 class="text-center mb-4">CHECK-IN</h5></b>
                     <div class="row justify-content-between text-left">
                         <div class="form-group col-sm-6 flex-column d-flex">

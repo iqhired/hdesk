@@ -42,8 +42,8 @@
         .logo_imag{
             height: auto;
             width:150px;
-            margin-left: 170px;
-            margin-left: 170px;
+            margin-left: 135px;
+
 
         }
 

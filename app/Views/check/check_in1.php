@@ -11,13 +11,16 @@
         .w-50 {
             width: 64%!important;
         }
+        .card{
+            background-image:url('public/assets/img/blue.jpeg');
+        }
         p {
             margin-top: 80px;
             margin-bottom: 1rem;
         }
         .logo_img {
             height: auto;
-            width: 135px;
+            width: 124px;
             margin-left: 9px;
         }
 
@@ -32,10 +35,45 @@
             background-color: #3d7e4c;
             border-color: #28a745;
             padding: 6px 20px;
-            margin-left: -110px;
+            margin-left: -178px;
 
         }
 
+        @media (max-width: 1600px) {
+
+            .card {
+                padding: 30px 40px;
+                margin-top: 20px;
+                margin-bottom: 60px;
+                border: none !important;
+                box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
+            }
+
+
+
+            .logo_img {
+                height: auto;
+                width: 134px;
+                margin-left: -6px;
+                margin-top: 16px;
+                margin-bottom: 16px;
+            }
+            a {
+                color: #142434;
+                text-decoration: none;
+                background-color: transparent;
+                margin-top: -19px;
+                margin-bottom: -16px;
+            }
+
+            .btn-success {
+                color: #fff;
+                background-color: #3d7e4c;
+                border-color: #28a745;
+                padding: 6px 20px;
+                margin-left: -111px;
+            }
+        }
         body{color: #000;overflow-x: hidden;height: 100%;background-repeat: no-repeat;background-size: 100% 100%}.card{padding: 30px 40px;margin-top: 60px;margin-bottom: 60px;border: none !important;box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2)}.blue-text{color: #00BCD4}.form-control-label{margin-bottom: 0}input, textarea, button{padding: 8px 15px;border-radius: 5px !important;margin: 5px 0px;box-sizing: border-box;border: 1px solid #ccc;font-size: 18px !important;font-weight: 300}input:focus, textarea:focus{-moz-box-shadow: none !important;-webkit-box-shadow: none !important;box-shadow: none !important;border: 1px solid #00BCD4;outline-width: 0;font-weight: 400}.btn-block{text-transform: uppercase;font-size: 15px !important;font-weight: 400;height: 43px;cursor: pointer}.btn-block:hover{color: #fff !important}button:focus{-moz-box-shadow: none !important;-webkit-box-shadow: none !important;box-shadow: none !important;outline-width: 0}
     </style>
 
@@ -86,7 +124,7 @@ if(isset($_SESSION['status']))
     <div class="container-fluid px-1 py-5 mx-auto">
         <div class="row d-flex justify-content-center">
             <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
-                <div class="card">
+                <div class="card" >
                     <b><h5 class="text-center mb-4">CHECK-IN</h5></b>
                     <div class="row justify-content-between text-left">
                         <div class="form-group col-sm-6 flex-column d-flex">

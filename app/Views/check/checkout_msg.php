@@ -43,7 +43,6 @@
             height: auto;
             width:150px;
             margin-left: 170px;
-            margin-left: 170px;
 
         }
 
@@ -56,13 +55,14 @@
 
         .container-fluid {
             width: 100%;
-            padding-right: 324px;
-            padding-left: 189px;
-            margin-right: 20px;
-            margin-left: 90px;
+            padding-right: 69px;
+            padding-left: 80px;
+            margin-right: 50px;
+            margin-left: auto;
         }
+
         .container-fluid.px-7.py-md-5 {
-            margin-top: 162px;
+            margin-top: 70px;
         }
 
         .card {
@@ -105,22 +105,29 @@
 
 
 
-<?php
-if(isset($_SESSION['status']))
-{
-    ?>
-    <div class = "alert alert-warning alert-dismissible fade show" role="alert">
-        <strong>Hey!!</strong> <?php echo $_SESSION['status']; ?>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-    <?php
-    unset($_SESSION['status']);
-}
-?>
 
 <div class="container-fluid px-7 py-md-5 ">
+
+
     <div class="row d-flex justify-content-center">
-        <div class="col-xl-5 col-lg-12 col-md-9 col-11 text-center">
+        <div class="col-xl-5 col-lg-12 col-md-9 col-11 ">
+
+            <?php
+            $session=\Config\Services::session();
+            helper('form');
+            if(!empty($session->getFlashdata('status'))){?>
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+
+                    <?php echo $session->getFlashdata('status');?>
+                        <button type="button" class="close" data-dismiss="alert" id="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+
+                </div>
+                <?php
+            }
+            ?>
+
             <div class="card">
                 <image class="logo_images" src="public/assets/img/emoji.gif" alt="logo">
                     <h2><b>THANK YOU FOR VISITING!!! </b></h2>
@@ -130,6 +137,16 @@ if(isset($_SESSION['status']))
         </div>
     </div>
 </div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+<script>
+    $('#alert').alert()
+</script>
+
+
 
 </body>
 </html>

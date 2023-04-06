@@ -17,7 +17,7 @@
         }
         .logo_img{
             height:auto;
-            width:150px;
+            width:117px;
         }
 
         .logo_images {
@@ -37,9 +37,11 @@
             background-color: #3d7e4c;
             border-color: #28a745;
             padding: 6px 20px;
-            margin-left: -45px;
+            margin-left: -92px;
 
         }
+
+
         @media (max-width: 800px) {
 
             .btn-success {
@@ -51,6 +53,34 @@
 
             }
         }
+        @media (max-width: 1600px) {
+
+
+
+            .logo_img {
+                height: auto;
+                width: 134px;
+                margin-left: -6px;
+                margin-top: 16px;
+                margin-bottom: 16px;
+            }
+            a {
+                color: #142434;
+                text-decoration: none;
+                background-color: transparent;
+                margin-top: -19px;
+                margin-bottom: -16px;
+            }
+
+            .btn-success {
+                color: #fff;
+                background-color: #3d7e4c;
+                border-color: #28a745;
+                padding: 6px 20px;
+                margin-left: -43px;
+            }
+        }
+
 
 
         body{color: #000;overflow-x: hidden;height: 100%;background-repeat: no-repeat;background-size: 100% 100%}.card{padding: 30px 40px;margin-top: 60px;margin-bottom: 60px;border: none !important;box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2)}.blue-text{color: #00BCD4}.form-control-label{margin-bottom: 0}input, textarea, button{padding: 8px 15px;border-radius: 5px !important;margin: 5px 0px;box-sizing: border-box;border: 1px solid #ccc;font-size: 18px !important;font-weight: 300}input:focus, textarea:focus{-moz-box-shadow: none !important;-webkit-box-shadow: none !important;box-shadow: none !important;border: 1px solid #00BCD4;outline-width: 0;font-weight: 400}.btn-block{text-transform: uppercase;font-size: 15px !important;font-weight: 400;height: 43px;cursor: pointer}.btn-block:hover{color: #fff !important}button:focus{-moz-box-shadow: none !important;-webkit-box-shadow: none !important;box-shadow: none !important;outline-width: 0}
@@ -58,7 +88,7 @@
 
 <body>
 
-<nav class="navbar navbar-expand-lg " style="background-color: #c2d5ce">
+<nav class="navbar navbar-expand-lg " style="background-color: #e8e7f9">
     <a class="navbar-brand" href="<?= base_url('homepage');?>">
         <image class="logo_img" src="public/assets/img/site_logo.png" alt="logo">
     </a>

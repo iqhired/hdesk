@@ -18,7 +18,7 @@
         }
         .logo_img {
             height: auto;
-            width: 135px;
+            width: 124px;
             margin-left: 9px;
         }
 
@@ -33,13 +33,12 @@
 
             border-color: #28a745;
             padding: 6px 20px;
-            margin-left: -5px;
+            margin-left: -57px;
 
         }
 
 
         @media (max-width: 800px) {
-
 
             .logo_img {
                 height: auto;
@@ -55,6 +54,33 @@
 
             }
         }
+        @media (max-width: 1600px) {
+
+
+
+            .logo_img {
+                height: auto;
+                width: 134px;
+                margin-left: -6px;
+                margin-top: 16px;
+                margin-bottom: 16px;
+            }
+            a {
+                color: #142434;
+                text-decoration: none;
+                background-color: transparent;
+                margin-top: -19px;
+                margin-bottom: -16px;
+            }
+
+            .btn-danger {
+                color: #fff;
+                border-color: #28a745;
+                padding: 6px 20px;
+                margin-left: -6px;
+            }
+        }
+
 
 
         body{color: #000;overflow-x: hidden;height: 100%;background-repeat: no-repeat;background-size: 100% 100%}.card{padding: 30px 40px;margin-top: 60px;margin-bottom: 60px;border: none !important;box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2)}.blue-text{color: #00BCD4}.form-control-label{margin-bottom: 0}input, textarea, button{padding: 8px 15px;border-radius: 5px !important;margin: 5px 0px;box-sizing: border-box;border: 1px solid #ccc;font-size: 18px !important;font-weight: 300}input:focus, textarea:focus{-moz-box-shadow: none !important;-webkit-box-shadow: none !important;box-shadow: none !important;border: 1px solid #00BCD4;outline-width: 0;font-weight: 400}.btn-block{text-transform: uppercase;font-size: 15px !important;font-weight: 400;height: 43px;cursor: pointer}.btn-block:hover{color: #fff !important}button:focus{-moz-box-shadow: none !important;-webkit-box-shadow: none !important;box-shadow: none !important;outline-width: 0}
@@ -129,14 +155,11 @@ if(isset($_SESSION['status']))
                             <button type="submit" class="btn btn-danger">CHECK-OUT</button>
                         </div>
                     </div>
-</form>
+    </form>
 </div>
 </div>
 </div>
 </div>
-
-
-
 
 </body>
 </html>

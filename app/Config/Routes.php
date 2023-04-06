@@ -46,7 +46,7 @@ $routes->get('deletecheckin/(:num)', 'Home1::deletecheckin/$1');
 $routes->post('checkin_store', 'Home1::store');
 
 $routes->get('check_out', 'Home1::checkout');
-$routes->get('checkout_msg', 'Home1::checkoutmsg');
+$routes->get('check_outmsg', 'Home1::checkoutmsg');
 
 
 $routes->get('loginpage', 'Home1::login');
@@ -61,6 +61,7 @@ $routes->get('deletelogin/(:num)', 'Home1::deletelogin/$1');
 
 $routes->get('check_outt', 'Home1::checkout1');
 $routes->get('logs', 'Home1::log_detail');
+
 $routes->post('checkout_store', 'Home1::storeout');
 
 

@@ -34,7 +34,7 @@
         .logo_images {
             height: auto;
             width: 200px;
-            margin-left: 96px;
+            margin-left: 150px;
 
 
         }
@@ -42,8 +42,8 @@
         .logo_imag{
             height: auto;
             width:150px;
-            margin-left: 135px;
-
+            margin-left: 170px;
+            margin-left: 170px;
 
         }
 
@@ -53,12 +53,13 @@
 
             box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
         }
+
         .container-fluid {
-            width: 73%;
-            padding-right: 118px;
+            width: 100%;
+            padding-right: 69px;
             padding-left: 80px;
-            margin-right: 243px;
-            margin-left: 280px;
+            margin-right: 50px;
+            margin-left: auto;
         }
 
         .container-fluid.px-7.py-md-5 {
@@ -91,29 +92,29 @@
 
 </head>
 <body>
+<?php
+if(isset($_SESSION['status']))
+{
+    ?>
+    <div class = "alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Hey!!</strong> <?php echo $_SESSION['status']; ?>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <?php
+    unset($_SESSION['status']);
+}
+?>
 
-
-
-
-
-    <div class="container-fluid px-7 py-md-5 ">
-
-        <div class="row d-flex justify-content-center">
-            <div class="col-xl-5 col-lg-12 col-md-9 col-11 text-center">
-                <div class="card">
-                    <image class="logo_images" src="public/assets/img/tick1.gif" alt="logo">
-                        <h2><b>  WELCOME  TO SAARGUMMI GROUP </b></h2>
-                        <image class="logo_imag" src="public/assets/img/site_logo.png" alt="logo">
-                </div>
+<div class="container-fluid px-7 py-md-5 ">
+    <div class="row d-flex justify-content-center">
+        <div class="col-xl-5 col-lg-12 col-md-9 col-11 text-center">
+            <div class="card">
+                <image class="logo_images" src="public/assets/img/tick1.gif" alt="logo">
+                    <h2><b>  WELCOME  TO SAARGUMMI GROUP </b></h2>
+                    <image class="logo_imag" src="public/assets/img/site_logo.png" alt="logo">
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
+</div>
 </body>
 </html>

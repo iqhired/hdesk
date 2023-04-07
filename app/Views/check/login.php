@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('public/assets/css/style.css')?>">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('public/assets/css/bootstrap4.min.css')?>">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
 
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
     <style>
@@ -38,10 +40,6 @@
 
 </head>
 <body>
-
-
-
-
 <section class="h-100 gradient-form" style="background-color: #ffffff;" >
     <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
@@ -65,23 +63,22 @@
                             <div class="card-body p-md-5 mx-md-4" >
                                 <form action="<?= base_url('login_store');?>" method="post">
                                     <div class="text-center">
-                                        <h5 class="mt-1 mb-5 pb-1">Please login to your account</h5>
+                                        <h5 class="mt-1 mb-4 pb-1"><b>Kindly, Login to your account </b></h5>
                                     </div>
-
-
                                     <div class="form-outline mb-4">
                                         <input type="text" name="u_name" id="" class="form-control"
                                                placeholder="Username" required/>
                                     </div>
-
                                     <div class="form-outline mb-4">
-                                        <input type="password" name="pass" id="" class="form-control" placeholder="Password" required />
+                                        <input class="form-control" type="password" placeholder="Password" name="pass" id="pass" required="required" >
+                                        <span class="input-icon" onclick="myFunction()" style="cursor: pointer;float: right;"><i class="fa fa-eye" aria-hidden="true"></i></span>
                                     </div>
+
 
                                     <div class="text-center pt-1 mb-5 pb-1">
                                         <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit">Log
                                             in</button>
-                                        <a class="text-muted" href="#!">Forgot password?</a>
+                                        <a class="text-muted" href="#">Forgot password?</a>
                                     </div>
                                 </form>
                             </div>
@@ -93,6 +90,16 @@
     </div>
 </section>
 
+<script type="text/javascript">
+        function myFunction() {
+        var x = document.getElementById("pass");
+        if (x.type === "password") {
+        x.type = "text";
+    } else {
+        x.type = "password";
+    }
+    }
+</script>
 </body>
 
 

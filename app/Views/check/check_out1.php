@@ -58,27 +58,7 @@
 
 
 
-            .logo_img {
-                height: auto;
-                width: 134px;
-                margin-left: -6px;
-                margin-top: 16px;
-                margin-bottom: 16px;
-            }
-            a {
-                color: #142434;
-                text-decoration: none;
-                background-color: transparent;
-                margin-top: -19px;
-                margin-bottom: -16px;
-            }
 
-            .btn-danger {
-                color: #fff;
-                border-color: #28a745;
-                padding: 6px 20px;
-                margin-left: -6px;
-            }
         }
 
 

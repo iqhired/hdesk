@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('public/assets/css/style.css')?>">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('public/assets/css/bootstrap4.min.css')?>">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
     <style>
         .w-50 {
@@ -131,7 +131,7 @@
             <div class="card">
                 <image class="logo_images" src="public/assets/img/emoji.gif" alt="logo">
                     <h2><b>THANK YOU FOR VISITING!!! </b></h2>
-                    <h2><b>See You Again Soon... </b></h2>
+                    <h2><center><b>See You Again Soon... </b></center></h2>
                     <image class="logo_imag" src="public/assets/img/site_logo.png" alt="logo">
             </div>
         </div>
@@ -142,9 +142,6 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 
-<script>
-    $('#alert').alert()
-</script>
 
 
 

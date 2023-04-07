@@ -111,17 +111,20 @@ class Home1 extends BaseController
 
     public function loginstore()
     {
-        $session=\Config\Services::session();
-        helper('form');
         $loginn = new login_detail();
-        $result = $loginn->where('u_name', $this->request->getVar('u_name'))->where('pass', md5($this->request->getVar('pass')))->first();
-        if ($result){
-            $session->getFlashdata();
-            return redirect()->to(base_url('homepage'))->with('status', 'Logged in Successfully');
-        } else {
-            return redirect()->to(base_url('loginpage'))->with('status', 'Error: Please Insert valid data');
-        }
+        $result = $loginn->where('u_name', $this->request->getVar('u_name'))->first();
+        if ($result != null) {
+            if ($result['pass'] == md5($this->request->getVar('pass'))) {
+                return redirect()->to(base_url('homepage'))->with('status', 'User Login Successfully');
+            } else {
 
+                return redirect()->to(base_url('loginpage'))->with('status', ' Invalid Password');
+            }
+
+        } else {
+
+            return redirect()->to(base_url('loginpage'))->with('status', 'Invalid Username ');
+        }
 
 
     }

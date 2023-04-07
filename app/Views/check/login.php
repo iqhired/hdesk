@@ -71,7 +71,7 @@
                                     </div>
                                     <div class="form-outline mb-4">
                                         <input class="form-control" type="password" placeholder="Password" name="pass" id="pass" required="required" >
-                                        <span class="input-icon" onclick="myFunction()" style="cursor: pointer;float: right;"><i class="fa fa-eye" aria-hidden="true"></i></span>
+                                        <span class="input-icon" onclick="myFunction()" style="cursor: pointer;float: right;margin-top: -30px;margin-right:7px"><i class="fa fa-eye" aria-hidden="true"></i></span>
                                     </div>
 
 

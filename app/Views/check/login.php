@@ -44,7 +44,6 @@
     <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-xl-5">
-
                 <?php
                 $session=\Config\Services::session();
                 helper('form');
@@ -56,7 +55,6 @@
                     <?php
                 }
                 ?>
-
                 <div class="card rounded-3 text-black" style="box-shadow: 0 12px 20px -10px rgb(59 149 163 / 28%), 0 4px 20px 0px rgb(0 0 0 / 12%), 0 7px 8px -5px rgb(59 149 163 / 20%);">
                     <div class="row g-0">
                         <div class="col-lg-12">
@@ -73,8 +71,6 @@
                                         <input class="form-control" type="password" placeholder="Password" name="pass" id="pass" required="required" >
                                         <span class="input-icon" onclick="myFunction()" style="cursor: pointer;float: right;margin-top: -30px;margin-right:7px"><i class="fa fa-eye" aria-hidden="true"></i></span>
                                     </div>
-
-
                                     <div class="text-center pt-1 mb-5 pb-1">
                                         <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit">Log
                                             in</button>

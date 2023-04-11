@@ -50,6 +50,21 @@
 
 </head>
 <style>
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        margin-bottom: 0;
+        padding-left: 0;
+        margin-left: 1587px;
+    }
+    .nav-link {
+        display: block;
+        padding: 0.5rem 1rem;
+        color: #2f3236;
+        text-decoration: none;
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+    }
 
     .container-fluid {
         margin-left: 35px;
@@ -102,21 +117,35 @@
 
         }
 
-        @media (max-width: 1600px) {
+        @media (max-width: 1800px)
+        {
+            .navbar-nav {
+                display: flex;
+                flex-direction: column;
+                list-style: none;
+                margin-bottom: 0;
+                padding-left: 0;
+                margin-left: 1587px;
+            }
+            .nav-link {
+                display: block;
+                padding: 0.5rem 1rem;
+                color: #2f3236;
+                text-decoration: none;
+                transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+            }
 
             .card {
                 padding: 30px 40px;
-                margin-top: 20px;
+                margin-top: 1px;
                 margin-bottom: 60px;
                 border: none !important;
                 box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
             }
 
-
-
             .logo_img {
                 height: auto;
-                width: 134px;
+                width: 250px;
                 margin-left: -6px;
                 margin-top: 16px;
                 margin-bottom: 16px;
@@ -136,7 +165,56 @@
                 padding: 6px 20px;
                 margin-left: -111px;
             }
+
+            .container-fluid {
+                margin-left: -67px;
+                margin-right: 33px;
+                padding-left: 15px;
+                padding-right: 15px;
+                width: 93%;
+            }
         }
+
+    @media (max-width: 800px) {
+
+        .card {
+            padding: 30px 40px;
+            margin-top: -52px;
+            margin-bottom: 60px;
+            border: none !important;
+            box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
+        }
+        .logo_img {
+            height: auto;
+            width: 134px;
+            margin-left: -6px;
+            margin-top: 16px;
+            margin-bottom: 16px;
+        }
+        a {
+            color: #142434;
+            text-decoration: none;
+            background-color: transparent;
+            margin-top: -19px;
+            margin-bottom: -16px;
+        }
+
+        .btn-success {
+            color: #fff;
+            background-color: #3d7e4c;
+            border-color: #28a745;
+            padding: 6px 20px;
+            margin-left: -111px;
+        }
+
+        .container-fluid {
+            margin-left: 25px;
+            margin-right: 33px;
+            padding-left: 15px;
+            padding-right: 15px;
+            width: 93%;
+        }
+    }
     </style>
 
 </head>
@@ -242,7 +320,7 @@ if(isset($_SESSION['status']))
 
                                 <div class="col-md-1"></div>
                                 <div class="col-md-1">
-                                    <label class="form-label mg-b-0">Purpose Of Visit</label>
+                                    <label class="form-label mg-b-0">Purpose of Visit</label>
                                 </div>
                                 <div class="col-md-4 mg-t-10 mg-md-t-0">
                                     <input type="text" class="form-control" name="p_visit" id="description" placeholder="Enter Purpose of Visit" required>

@@ -75,6 +75,93 @@
         width: 187px;
         margin-left: 845px;
     }
+    @media (max-width: 1600px) {
+
+        .card {
+            padding: 30px 40px;
+            margin-top: 1px;
+            margin-bottom: 60px;
+            border: none !important;
+            box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
+        }
+
+
+
+        .logo_img {
+            height: auto;
+            width: 134px;
+            margin-left: 690px;
+            margin-top: 22px;
+            margin-bottom: -21px;
+        }
+        a {
+            color: #142434;
+            text-decoration: none;
+            background-color: transparent;
+            margin-top: -19px;
+            margin-bottom: -16px;
+        }
+
+        .btn-success {
+            color: #fff;
+            background-color: #3d7e4c;
+            border-color: #28a745;
+            padding: 6px 20px;
+            margin-left: -111px;
+        }
+
+        .container-fluid {
+            margin-left: -67px;
+            margin-right: 33px;
+            padding-left: 15px;
+            padding-right: 15px;
+            width: 93%;
+        }
+    }
+
+    @media (max-width: 800px) {
+
+        .card {
+            padding: 30px 40px;
+            margin-top: -52px;
+            margin-bottom: 60px;
+            border: none !important;
+            box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
+        }
+
+
+
+        .logo_img {
+            height: auto;
+            width: 139px;
+            margin-left: 227px;
+            margin-top: 22px;
+            margin-bottom: 16px;
+        }
+        a {
+            color: #142434;
+            text-decoration: none;
+            background-color: transparent;
+            margin-top: -19px;
+            margin-bottom: -16px;
+        }
+
+        .btn-success {
+            color: #fff;
+            background-color: #3d7e4c;
+            border-color: #28a745;
+            padding: 6px 20px;
+            margin-left: -111px;
+        }
+
+        .container-fluid {
+            margin-left: 25px;
+            margin-right: 33px;
+            padding-left: 15px;
+            padding-right: 15px;
+            width: 93%;
+        }
+    }
     </style>
 <body>
 <a class="navbar-brand" href="<?= base_url('/');?>">
@@ -90,6 +177,7 @@
             <div class="row">
                <div class="col-lg-12 col-md-12">
         <div class="card">
+
             <div class="card-header">
                 <h6 class="card-title">CHECK IN</h6>
             </div>
@@ -101,7 +189,6 @@
                     <div class="col-md-4 mg-t-10 mg-md-t-0">
                         <input type="text" class="form-control" name="f_name" id="name" placeholder="Enter First Name" required>
                     </div>
-
                     <div class="col-md-1"></div>
                     <div class="col-md-1">
                         <label class="form-label mg-b-0">Last Name</label>

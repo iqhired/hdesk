@@ -12,6 +12,13 @@
     </script>
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
     <style>
+        .card {
+            padding: 30px 40px;
+            margin-top: 23px;
+            margin-bottom: 60px;
+            border: none !important;
+            box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
+        }
         .w-50 {
             width: 64%!important;
         }

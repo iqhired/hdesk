@@ -34,9 +34,7 @@
         .logo_images {
             height: auto;
             width: 130px;
-            margin-left: 170px;
-
-
+            margin-left: 158px;
         }
 
         .logo_imag{
@@ -55,10 +53,10 @@
 
         .container-fluid {
             width: 100%;
-            padding-right: 69px;
+            padding-right: 505px;
             padding-left: 80px;
-            margin-right: 50px;
-            margin-left: auto;
+            margin-right: 106px;
+            margin-left: 206px;
         }
 
         .container-fluid.px-7.py-md-5 {
@@ -71,7 +69,7 @@
             margin-bottom: 60px;
             border: none !important;
             box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
-            background-color: #b8dbd2;
+            background-color: #def5ef;
         }
 
         @media (max-width: 800px) {
@@ -112,26 +110,12 @@
     <div class="row d-flex justify-content-center">
         <div class="col-xl-5 col-lg-12 col-md-9 col-11 ">
 
-            <?php
-            $session=\Config\Services::session();
-            helper('form');
-            if(!empty($session->getFlashdata('status'))){?>
-                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
 
-                    <?php echo $session->getFlashdata('status');?>
-                        <button type="button" class="close" data-dismiss="alert" id="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-
-                </div>
-                <?php
-            }
-            ?>
 
             <div class="card">
                 <image class="logo_images" src="public/assets/img/emoji.gif" alt="logo">
                     <h2><b>THANK YOU FOR VISITING!!! </b></h2>
-                    <h2><center><b>See You Again Soon... </b></center></h2>
+                    <h2><b><center>See You Again Soon...</center> </b></h2>
                     <image class="logo_imag" src="public/assets/img/site_logo.png" alt="logo">
             </div>
         </div>

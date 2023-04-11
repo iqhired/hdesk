@@ -1,44 +1,214 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-    <title></title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url('public/assets/css/style.css')?>">
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url('public/assets/css/bootstrap4.min.css')?>">
 
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
-    <style>
-        .w-50 {
-            width: 64%!important;
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Description" content="Nowa – Laravel Bootstrap 5 Admin & Dashboard Template">
+    <meta name="Author" content="Spruko Technologies Private Limited">
+    <meta name="Keywords" content="admin dashboard, admin dashboard laravel, admin panel template, blade template, blade template laravel, bootstrap template, dashboard laravel, laravel admin, laravel admin dashboard, laravel admin panel, laravel admin template, laravel bootstrap admin template, laravel bootstrap template, laravel template"/>
+
+    <!-- Title -->
+    <title> Check in</title>
+
+    <!-- FAVICON -->
+
+
+    <!-- ICONS CSS -->
+    <link href="https://laravel8.spruko.com/nowa/assets/plugins/icons/icons.css" rel="stylesheet">
+
+    <!-- BOOTSTRAP CSS -->
+    <link href="https://laravel8.spruko.com/nowa/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- RIGHT-SIDEMENU CSS -->
+    <link href="https://laravel8.spruko.com/nowa/assets/plugins/sidebar/sidebar.css" rel="stylesheet">
+
+    <!-- P-SCROLL BAR CSS -->
+    <link href="https://laravel8.spruko.com/nowa/assets/plugins/perfect-scrollbar/p-scrollbar.css" rel="stylesheet" />
+
+
+    <!--- Internal Select2 css-->
+    <link href="https://laravel8.spruko.com/nowa/assets/plugins/select2/css/select2.min.css" rel="stylesheet">
+
+
+    <!-- STYLES CSS -->
+    <link href="https://laravel8.spruko.com/nowa/assets/css/style.css" rel="stylesheet">
+    <link href="https://laravel8.spruko.com/nowa/assets/css/style-dark.css" rel="stylesheet">
+    <link href="https://laravel8.spruko.com/nowa/assets/css/style-transparent.css" rel="stylesheet">
+
+
+    <!-- SKIN-MODES CSS -->
+    <link href="https://laravel8.spruko.com/nowa/assets/css/skin-modes.css" rel="stylesheet" />
+
+    <!-- ANIMATION CSS -->
+    <link href="https://laravel8.spruko.com/nowa/assets/css/animate.css" rel="stylesheet">
+
+    <!-- SWITCHER CSS -->
+    <link href="https://laravel8.spruko.com/nowa/assets/switcher/css/switcher.css" rel="stylesheet"/>
+    <link href="https://laravel8.spruko.com/nowa/assets/switcher/demo.css" rel="stylesheet"/>
+
+</head>
+<style>
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        margin-bottom: 0;
+        padding-left: 0;
+        margin-left: 1698px;
+    }
+    .nav-link {
+        display: block;
+        padding: 0.5rem 1rem;
+        color: #2f3236;
+        text-decoration: none;
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+    }
+
+    .container-fluid {
+        margin-left: 35px;
+        margin-right: 33px;
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 80%;
+    }
+
+    .card-header {
+        border-bottom: 0;
+        border-top-left-radius: 5px!important;
+        border-top-right-radius: 5px!important;
+        background-color: #d9d9d9;
+    }
+    .app-content {
+        margin-bottom: 0!important;
+        min-height: calc(100vh - 114px);
+        transition: margin-left .32s ease;
+        margin-top: 100px;
+    }
+    .w-50 {
+        width: 64%!important;
+    }
+    .card{
+        background-image:url('public/assets/img/blue.jpeg');
+    }
+    p {
+        margin-top: 80px;
+        margin-bottom: 1rem;
+    }
+    .logo_img {
+        height: auto;
+        width: 124px;
+        margin-left: 9px;
+    }
+
+    a {
+        color: #142434;
+        text-decoration: none;
+        background-color: transparent;
+    }
+
+    .btn-success {
+        color: #fff;
+        background-color: #3d7e4c;
+        border-color: #28a745;
+        padding: 6px 20px;
+        margin-left: -178px;
+
+    }
+
+    @media (max-width: 1600px) {
+
+        .card {
+            padding: 30px 40px;
+            margin-top: 1px;
+            margin-bottom: 60px;
+            border: none !important;
+            box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
         }
-        p {
-            margin-top: 80px;
-            margin-bottom: 1rem;
+
+
+
+        .logo_img {
+            height: auto;
+            width: 134px;
+            margin-left: -6px;
+            margin-top: 16px;
+            margin-bottom: 16px;
         }
-        .logo_img{
-            height:auto;
-            width:150px;
+        a {
+            color: #142434;
+            text-decoration: none;
+            background-color: transparent;
+            margin-top: -19px;
+            margin-bottom: -16px;
         }
 
-        .logo_images {
-            width: 25px;
-            height: 25px;
-        }
-        svg {
-            overflow: hidden;
-            vertical-align: middle;
-            color: black;
+        .btn-success {
+            color: #fff;
+            background-color: #3d7e4c;
+            border-color: #28a745;
+            padding: 6px 20px;
+            margin-left: -111px;
         }
 
+        .container-fluid {
+            margin-left: -67px;
+            margin-right: 33px;
+            padding-left: 15px;
+            padding-right: 15px;
+            width: 93%;
+        }
+    }
+
+    @media (max-width: 800px) {
+
+        .card {
+            padding: 30px 40px;
+            margin-top: -52px;
+            margin-bottom: 60px;
+            border: none !important;
+            box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
+        }
 
 
 
-        body{color: #000;overflow-x: hidden;height: 100%;background-repeat: no-repeat;background-size: 100% 100%}.card{padding: 30px 40px;margin-top: 60px;margin-bottom: 60px;border: none !important;box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2)}.blue-text{color: #00BCD4}.form-control-label{margin-bottom: 0}input, textarea, button{padding: 8px 15px;border-radius: 5px !important;margin: 5px 0px;box-sizing: border-box;border: 1px solid #ccc;font-size: 18px !important;font-weight: 300}input:focus, textarea:focus{-moz-box-shadow: none !important;-webkit-box-shadow: none !important;box-shadow: none !important;border: 1px solid #00BCD4;outline-width: 0;font-weight: 400}.btn-block{text-transform: uppercase;font-size: 15px !important;font-weight: 400;height: 43px;cursor: pointer}.btn-block:hover{color: #fff !important}button:focus{-moz-box-shadow: none !important;-webkit-box-shadow: none !important;box-shadow: none !important;outline-width: 0}
-    </style>
+        .logo_img {
+            height: auto;
+            width: 134px;
+            margin-left: -6px;
+            margin-top: 16px;
+            margin-bottom: 16px;
+        }
+        a {
+            color: #142434;
+            text-decoration: none;
+            background-color: transparent;
+            margin-top: -19px;
+            margin-bottom: -16px;
+        }
+
+        .btn-success {
+            color: #fff;
+            background-color: #3d7e4c;
+            border-color: #28a745;
+            padding: 6px 20px;
+            margin-left: -111px;
+        }
+
+        .container-fluid {
+            margin-left: 25px;
+            margin-right: 33px;
+            padding-left: 15px;
+            padding-right: 15px;
+            width: 93%;
+        }
+    }
+</style>
 
 </head>
 <body>
-<nav class="navbar navbar-expand-lg " style="background-color: #c2d5ce">
+<nav class="navbar navbar-expand-lg " style="background-color: #e8e7f9">
     <a class="navbar-brand" href="<?= base_url('/');?>">
         <image class="logo_img" src="../public/assets/img/site_logo.png" alt="logo">
     </a>
@@ -52,15 +222,16 @@
                 <a class="nav-link" href="<?= base_url('homepage');?>"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-houses-fill" viewBox="0 0 16 16">
                         <path d="M7.207 1a1 1 0 0 0-1.414 0L.146 6.646a.5.5 0 0 0 .708.708L1 7.207V12.5A1.5 1.5 0 0 0 2.5 14h.55a2.51 2.51 0 0 1-.05-.5V9.415a1.5 1.5 0 0 1-.56-2.475l5.353-5.354L7.207 1Z"/>
                         <path d="M8.793 2a1 1 0 0 1 1.414 0L12 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l1.854 1.853a.5.5 0 0 1-.708.708L15 8.207V13.5a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 4 13.5V8.207l-.146.147a.5.5 0 1 1-.708-.708L8.793 2Z"/>
-                    </svg><span class="sr-only">(current)</span></a>
+                    </svg><span class="sr-only">(current)</span>
+                </a>
             </li>
-
-
 
         </ul>
     </div>
-
 </nav>
+
+
+
 
 <?php
 if(isset($_SESSION['status']))
@@ -75,55 +246,88 @@ if(isset($_SESSION['status']))
 }
 ?>
 
-<form action="<?= base_url('check/updatein/'.$check['id']);?>" method="post">
+<div class="main-content app-content">
+    <!-- container -->
+    <div class="main-container container-fluid">
+        <!-- breadcrumb -->
+        <form action="<?= base_url('check/updatein/'.$check['id']);?>" method="post">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h6 class="card-title">EDIT CHECK IN</h6>
+                        </div>
+                        <div class="pd-30 pd-sm-20">
+                            <div class="row row-xs">
+                                <div class="col-md-1">
+                                    <label class="form-label mg-b-0">First Name</label>
+                                </div>
+                                <div class="col-md-4 mg-t-10 mg-md-t-0">
+                                    <input type="text" class="form-control" name="f_name" value="<?=$check['f_name']?>" id="name" placeholder="Enter First Name" required>
+                                </div>
 
-    <div class="container-fluid px-1 py-5 mx-auto">
-        <div class="row d-flex justify-content-center">
-            <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
-                <div class="card">
-                    <b><h5 class="text-center mb-4">UPDATE CHECK-IN</h5></b>
-                    <div class="row justify-content-between text-left">
-                        <div class="form-group col-sm-6 flex-column d-flex">
-                            <label class="form-control-label px-3">First name<span class="text-danger"> *</span></label>
-                            <input type="text" id="fname" name="f_name" value="<?=$check['f_name']?>" placeholder="Enter your first name" required >
+                                <div class="col-md-1"></div>
+                                <div class="col-md-1">
+                                    <label class="form-label mg-b-0">Last Name</label>
+                                </div>
+                                <div class="col-md-4 mg-t-10 mg-md-t-0">
+                                    <input type="text" class="form-control" name="l_name" value="<?=$check['l_name']?>"  placeholder="Enter Last Name" required>
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-group col-sm-6 flex-column d-flex">
-                            <label class="form-control-label px-3">Last name<span class="text-danger"></span></label>
-                            <input type="text" id="lname" name="l_name" value="<?=$check['l_name']?>" placeholder="Enter your last name" >
-                        </div>
-                    </div>
-                    <div class="row justify-content-between text-left">
-                        <div class="form-group col-sm-6 flex-column d-flex">
-                            <label class="form-control-label px-3">Email<span class="text-danger"> </span></label>
-                            <input type="text" name="email" value="<?=$check['email']?>" placeholder="Enter Email" >
-                        </div>
-                        <div class="form-group col-sm-6 flex-column d-flex">
-                            <label class="form-control-label px-3">Phone number<span class="text-danger"> </span></label>
-                            <input type="text"  name="mobile" value="<?=$check['mobile']?>" placeholder="Enter Phone number" >
-                        </div>
-                    </div>
-                    <div class="row justify-content-between text-left">
-                        <div class="form-group col-sm-12 flex-column d-flex">
-                            <label class="form-control-label px-3">Company Name<span class="text-danger"> *</span></label>
-                            <input type="text" name="c_name" value="<?=$check['c_name']?>" placeholder="Enter Company Name" required>
-                        </div>
-                    </div>
-                    <div class="row justify-content-between text-left">
-                        <div class="form-group col-12 flex-column d-flex"> <label class="form-control-label px-3">Purpose of Visit<span class="text-danger"> *</span></label>
-                            <textarea  name="p_visit" value="<?=$check['p_visit']?>" placeholder="Enter Purpose of Visit" required> </textarea>
-                        </div>
-                    </div>
-                    <div class="row justify-content-end">
-                        <div class="form-group col-sm-4">
-                            <button type="submit" class="btn-block btn-primary">UPDATE CHECK-IN</button>
 
+                        <div class="pd-30 pd-sm-20">
+                            <div class="row row-xs">
+                                <div class="col-md-1">
+                                    <label class="form-label mg-b-0">Email</label>
+                                </div>
+                                <div class="col-md-4 mg-t-10 mg-md-t-0">
+                                    <input type="text" class="form-control" name="email" value="<?=$check['email']?>" id="name" placeholder="Enter Email" required>
+                                </div>
+
+                                <div class="col-md-1"></div>
+                                <div class="col-md-1">
+                                    <label class="form-label mg-b-0">Mobile No.</label>
+                                </div>
+                                <div class="col-md-4 mg-t-10 mg-md-t-0">
+                                    <input type="text" class="form-control" name="mobile" value="<?=$check['mobile']?>"  placeholder="Enter Mobile No.." required>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </form>
-            </div>
-       </div>
+
+                        <div class="pd-30 pd-sm-20">
+                            <div class="row row-xs">
+                                <div class="col-md-1">
+                                    <label class="form-label mg-b-0">Company Name</label>
+                                </div>
+                                <div class="col-md-4 mg-t-10 mg-md-t-0">
+                                    <input type="text" class="form-control" name="c_name" value="<?=$check['c_name']?>" id="name" placeholder="Enter Company Name" required>
+                                </div>
+
+                                <div class="col-md-1"></div>
+                                <div class="col-md-1">
+                                    <label class="form-label mg-b-0">Purpose of Visit</label>
+                                </div>
+                                <div class="col-md-4 mg-t-10 mg-md-t-0">
+                                    <input type="text" class="form-control" name="p_visit" value="<?=$check['p_visit']?>" id="description" placeholder="Enter Purpose of Visit" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body pt-0">
+                            <button type="submit" class="btn btn-primary pd-x-30 mg-r-5 mg-t-5 submit_btn">UPDATE</button>
+                        </div>
+        </form>
     </div>
 </div>
+</div>
+</div>
+</div>
+</div>
+</body>
+
+
+
+
 
 </body>
 </html>

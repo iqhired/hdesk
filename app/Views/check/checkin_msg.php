@@ -8,6 +8,24 @@
 
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
     <style>
+        .container-fluid {
+            width: 100%;
+            padding-right: 69px;
+            padding-left: 80px;
+            margin-right: 50px;
+            margin-left: -129px;
+        }
+
+
+        .card {
+            padding: 49px 40px;
+            margin-top: 157px;
+            margin-bottom: 76px;
+            border: none !important;
+            box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
+            margin-left: 208px;
+        }
+
 
         .w-50 {
             width: 64%!important;
@@ -35,17 +53,14 @@
         .logo_images {
             height: auto;
             width: 200px;
-            margin-left: 150px;
-
-
+            margin-left: 108px;
         }
 
-        .logo_imag{
+        .logo_imag {
             height: auto;
-            width:150px;
+            width: 150px;
             margin-left: 170px;
-            margin-left: 170px;
-
+            margin-left: 150px;
         }
 
         .card {
@@ -53,14 +68,6 @@
             margin-top: 100px;
 
             box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
-        }
-
-        .container-fluid {
-            width: 100%;
-            padding-right: 69px;
-            padding-left: 80px;
-            margin-right: 50px;
-            margin-left: auto;
         }
 
         .container-fluid.px-7.py-md-5 {

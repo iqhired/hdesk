@@ -117,35 +117,21 @@
 
         }
 
-        @media (max-width: 1800px)
-        {
-            .navbar-nav {
-                display: flex;
-                flex-direction: column;
-                list-style: none;
-                margin-bottom: 0;
-                padding-left: 0;
-                margin-left: 1587px;
-            }
-            .nav-link {
-                display: block;
-                padding: 0.5rem 1rem;
-                color: #2f3236;
-                text-decoration: none;
-                transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
-            }
+        @media (max-width: 1800px) {
 
             .card {
-                padding: 30px 40px;
+                padding: -1px 40px;
                 margin-top: 1px;
                 margin-bottom: 60px;
                 border: none !important;
                 box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
             }
 
+
+
             .logo_img {
                 height: auto;
-                width: 250px;
+                width: 134px;
                 margin-left: -6px;
                 margin-top: 16px;
                 margin-bottom: 16px;
@@ -173,6 +159,7 @@
                 padding-right: 15px;
                 width: 93%;
             }
+
         }
 
     @media (max-width: 800px) {
@@ -184,6 +171,7 @@
             border: none !important;
             box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
         }
+
         .logo_img {
             height: auto;
             width: 134px;
@@ -215,9 +203,11 @@
             width: 93%;
         }
     }
-    </style>
 
+
+    </style>
 </head>
+
 <body>
 <nav class="navbar navbar-expand-lg " style="background-color: #e8e7f9">
     <a class="navbar-brand" href="<?= base_url('homepage');?>">

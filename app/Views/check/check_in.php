@@ -50,19 +50,30 @@
 
 </head>
 <style>
-    .container-fluid {
+    body {margin: 0; height: 100%; overflow: hidden}
+
+    .bg-image {
+        width: 100%;
+        height: 1014px;
+        background-image: url(public/assets/img/istockphoto1.jpg);
+        background-size: 135%;
+        background-repeat: no-repeat;
+    }
+    .container-fluid
+    {
         margin-left: 35px;
         margin-right: 33px;
         padding-left: 15px;
         padding-right: 15px;
         width: 80%;
+        margin-top: -939px;
     }
 
     .card-header {
         border-bottom: 0;
         border-top-left-radius: 5px!important;
         border-top-right-radius: 5px!important;
-        background-color: #d9d9d9;
+        background-color:#69a2ab;
     }
     .app-content {
         margin-bottom: 0!important;
@@ -74,15 +85,28 @@
         height: auto;
         width: 187px;
         margin-left: 845px;
+        margin-top: -1981px;
     }
+
     @media (max-width: 1600px) {
+        body {margin: 0; height: 100%; overflow: hidden}
+
+        .bg-image
+        {
+            width:100%;
+            height:720px;
+            background-image:url('public/assets/img/istockphoto1.jpg');
+            background-size:100%;
+            background-repeat:no-repeat;
+        }
 
         .card {
-            padding: 30px 40px;
+            padding: -1px 40px;
             margin-top: 1px;
             margin-bottom: 60px;
             border: none !important;
             box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
+
         }
 
 
@@ -91,7 +115,7 @@
             height: auto;
             width: 134px;
             margin-left: 690px;
-            margin-top: 22px;
+            margin-top: -1400px;
             margin-bottom: -21px;
         }
         a {
@@ -116,11 +140,29 @@
             padding-left: 15px;
             padding-right: 15px;
             width: 93%;
+            margin-top: -702px;
+            background-image:url('public/assets/img/istockphoto1.jpg');
+
         }
     }
 
     @media (max-width: 800px) {
-
+        body {margin: 0; height: 100%; overflow: hidden}
+        .bg-image
+        {
+            width:100%;
+            height:720px;
+            background-image:url('public/assets/img/istockphoto1.jpg');
+            background-size:100%;
+            background-repeat:no-repeat;
+        }
+        .bg-image {
+            width: 100%;
+            height: 995px;
+            background-image: url(public/assets/img/istockphoto1.jpg);
+            background-size: 264%;
+            background-repeat: no-repeat;
+        }
         .card {
             padding: 30px 40px;
             margin-top: -52px;
@@ -128,14 +170,11 @@
             border: none !important;
             box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
         }
-
-
-
         .logo_img {
             height: auto;
-            width: 139px;
-            margin-left: 227px;
-            margin-top: 22px;
+            width: 158px;
+            margin-left: 225px;
+            margin-top: -1910px;
             margin-bottom: 16px;
         }
         a {
@@ -160,15 +199,16 @@
             padding-left: 15px;
             padding-right: 15px;
             width: 93%;
+            margin-top: -980px;
         }
     }
     </style>
 <body>
+<div class="bg-image"></div>
 <a class="navbar-brand" href="<?= base_url('/');?>">
     <image class="logo_img" src="public/assets/img/site_logo.png" alt="logo">
 
 </a>
-
 <div class="main-content app-content">
     <!-- container -->
     <div class="main-container container-fluid">
@@ -176,10 +216,10 @@
         <form action="<?= base_url('checkin_store');?>" method="post">
             <div class="row">
                <div class="col-lg-12 col-md-12">
-        <div class="card">
+                    <div class="card">
 
             <div class="card-header">
-                <h6 class="card-title">CHECK IN</h6>
+                <h6 class="card-title" style="color:white;font-size:18px;">CHECK IN</h6>
             </div>
             <div class="pd-30 pd-sm-20">
                 <div class="row row-xs">

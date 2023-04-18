@@ -50,117 +50,74 @@
 
 </head>
 <style>
-    .navbar-nav {
-        display: flex;
-        flex-direction: column;
-        list-style: none;
-        margin-bottom: 0;
-        padding-left: 0;
-        margin-left: 1587px;
+    @media (max-width: 2000px) {
+
+
+        .logo_img{
+            width:30%;
+        }
+        .navbar-expand-lg .navbar-nav {
+            flex-direction: row;
+            margin-left: 1393px;
+        }
+        .card-header {
+            border-bottom: 0;
+            border-top-left-radius: 5px!important;
+            border-top-right-radius: 5px!important;
+            background-color:#69a2ab;
+        }
+        .container-fluid {
+            margin-left: -61px;
+            margin-right: 33px;
+
+            width: 93%;
+            margin-top: 207px;
+        }
+
+
+
     }
-    .nav-link {
-        display: block;
-        padding: 0.5rem 1rem;
-        color: #2f3236;
-        text-decoration: none;
-        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+    @media (max-width: 1600px) {
+
+        .logo_img{
+            width:30%;
+        }
+        .card-header {
+            border-bottom: 0;
+            border-top-left-radius: 5px!important;
+            border-top-right-radius: 5px!important;
+            background-color:#69a2ab;
+        }
+
+        .navbar-nav {
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            margin-bottom: 0;
+            padding-left: 0;
+            margin-left: 995px;
+        }
+        .card {
+            padding: 30px 40px;
+            margin-top: 121px;
+            margin-bottom: 60px;
+            border: none !important;
+            box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
+        }
+
+        .container-fluid {
+            margin-left: -61px;
+            margin-right: 33px;
+            padding-left: 15px;
+            padding-right: 15px;
+            width: 93%;
+        }
+        .navbar-expand-lg .navbar-nav .nav-link {
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+            color: black;
+        }
     }
-
-    .container-fluid {
-        margin-left: 35px;
-        margin-right: 33px;
-        padding-left: 15px;
-        padding-right: 15px;
-        width: 80%;
-    }
-
-    .card-header {
-        border-bottom: 0;
-        border-top-left-radius: 5px!important;
-        border-top-right-radius: 5px!important;
-        background-color: #d9d9d9;
-    }
-    .app-content {
-        margin-bottom: 0!important;
-        min-height: calc(100vh - 114px);
-        transition: margin-left .32s ease;
-        margin-top: 100px;
-    }
-        .w-50 {
-            width: 64%!important;
-        }
-        .card{
-            background-image:url('public/assets/img/blue.jpeg');
-        }
-        p {
-            margin-top: 80px;
-            margin-bottom: 1rem;
-        }
-        .logo_img {
-            height: auto;
-            width: 124px;
-            margin-left: 9px;
-        }
-
-        a {
-            color: #142434;
-            text-decoration: none;
-            background-color: transparent;
-        }
-
-        .btn-success {
-            color: #fff;
-            background-color: #3d7e4c;
-            border-color: #28a745;
-            padding: 6px 20px;
-            margin-left: -178px;
-
-        }
-
-        @media (max-width: 1800px) {
-
-            .card {
-                padding: -1px 40px;
-                margin-top: 1px;
-                margin-bottom: 60px;
-                border: none !important;
-                box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
-            }
-
-
-
-            .logo_img {
-                height: auto;
-                width: 134px;
-                margin-left: -6px;
-                margin-top: 16px;
-                margin-bottom: 16px;
-            }
-            a {
-                color: #142434;
-                text-decoration: none;
-                background-color: transparent;
-                margin-top: -19px;
-                margin-bottom: -16px;
-            }
-
-            .btn-success {
-                color: #fff;
-                background-color: #3d7e4c;
-                border-color: #28a745;
-                padding: 6px 20px;
-                margin-left: -111px;
-            }
-
-            .container-fluid {
-                margin-left: -67px;
-                margin-right: 33px;
-                padding-left: 15px;
-                padding-right: 15px;
-                width: 93%;
-            }
-
-        }
 
     @media (max-width: 800px) {
 
@@ -171,7 +128,6 @@
             border: none !important;
             box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
         }
-
         .logo_img {
             height: auto;
             width: 134px;
@@ -209,10 +165,10 @@
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg " style="background-color: #e8e7f9">
+
+<nav class="navbar navbar-expand-lg " style="background-color:#d7e8ee;">
     <a class="navbar-brand" href="<?= base_url('homepage');?>">
         <image class="logo_img" src="public/assets/img/site_logo.png" alt="logo">
-
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -220,7 +176,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="<?= base_url('checkintable');?>">Check-in Details <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="<?= base_url('checkintable');?>"> Details <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link" href="<?= base_url('homepage');?>"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-houses-fill" viewBox="0 0 16 16">
@@ -232,11 +188,8 @@
 
         </ul>
     </div>
+
 </nav>
-
-
-
-
 <?php
 if(isset($_SESSION['status']))
 {

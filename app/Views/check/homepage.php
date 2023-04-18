@@ -7,6 +7,29 @@
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('public/assets/css/bootstrap4.min.css')?>">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
     <style>
+        .bg-image {
+            width: 100%;
+            height: 1014px;
+            background-image: url(public/assets/img/istockphoto1.jpg);
+            background-size: 135%;
+            background-repeat: no-repeat;
+        }
+        .logo_img {
+            height: auto;
+            width: 187px;
+            margin-left: 820px;
+            margin-top: -2000px;
+        }
+
+        .row {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            margin-right: -15px;
+            margin-left: -15px;
+            margin-top: -1000px;
+        }
 
         body {
             font-size: 20px;
@@ -149,7 +172,7 @@
                 cursor: pointer;
                 outline-offset: 4px;
                 max-resolution: res;
-                margin-top: 260px;
+                margin-top: 320px;
                 margin-left: 400px;
             }
 
@@ -168,11 +191,10 @@
                 transform: translateY(-2px);
             }
             .logo_img {
-
                 height: auto;
                 width: 200px;
                 margin-left: 694px;
-                margin-top:60px;
+                margin-top: -1996px;
             }
             a {
                 color: #142434;
@@ -186,6 +208,8 @@
     </style>
 </head>
 <body>
+<div class="bg-image"></div>
+
 
 
     <a class="navbar-brand" href="<?= base_url('/');?>">

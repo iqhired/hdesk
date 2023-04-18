@@ -10,9 +10,37 @@
 
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
     <style>
+        .bg-image
+        {
+            width:100%;
+            height:998px;
+            background-image:url('public/assets/img/istockphoto1.jpg');
+            background-size:100%;
+            background-repeat:no-repeat;
+        }
+
+        .card {
+            position: relative;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            min-width: 0;
+            word-wrap: break-word;
+            background-color: #fff;
+            background-clip: border-box;
+            border: 1px solid rgba(0,0,0,.125);
+            border-radius: 2.25rem;
+        }
+        .form-control {
+
+            border-radius: 1.25rem;
+        }
         .gradient-custom-2 {
             /* fallback for old browsers */
             background: #fccb90;
+            padding: 0.375rem 0.75rem;
+
 
             /* Chrome 10-25, Safari 5.1-6 */
             background: -webkit-linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
@@ -22,10 +50,28 @@
         }
 
         @media (min-width: 768px) {
-            .gradient-form {
-                height: 100vh !important;
+            body {margin: 0; height: 100%; overflow: hidden}
+
+            .mb-4, .my-4 {
+                margin-bottom: 1.5rem!important;
+                width: 113%;
+                margin-left: -12px;
+            }
+
+            .mb-5, .my-4 {
+                margin-bottom: 1.5rem!important;
+                width: 70%;
+                margin-left: 24px;
+            }
+            .justify-content-center {
+                -ms-flex-pack: center!important;
+                justify-content: center!important;
+                margin-top: -756px;
             }
         }
+
+
+
         @media (min-width: 769px) {
             .gradient-custom-2 {
                 border-top-right-radius: .3rem;
@@ -40,6 +86,8 @@
 
 </head>
 <body>
+<div class="bg-image"></div>
+
 <section class="h-100 gradient-form" style="background-color: #ffffff;" >
     <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
@@ -48,20 +96,20 @@
                 $session=\Config\Services::session();
                 helper('form');
                 if(!empty($session->getFlashdata('status'))){?>
-                    <div class="alert alert-secondary" role="alert">
+                    <div class="alert alert-danger" role="alert">
                         <?php echo $session->getFlashdata('status');?>
 
                     </div>
                     <?php
                 }
                 ?>
-                <div class="card rounded-3 text-black" style="box-shadow: 0 12px 20px -10px rgb(59 149 163 / 28%), 0 4px 20px 0px rgb(0 0 0 / 12%), 0 7px 8px -5px rgb(59 149 163 / 20%);">
+                <div class="card rounded-3 text-black" style="width: 21rem; margin-left: 61px; box-shadow: 0 12px 20px -10px rgb(59 149 163 / 28%), 0 4px 20px 0px rgb(0 0 0 / 12%), 0 7px 8px -5px rgb(59 149 163 / 20%);">
                     <div class="row g-0">
                         <div class="col-lg-12">
                             <div class="card-body p-md-5 mx-md-4" >
                                 <form action="<?= base_url('login_store');?>" method="post">
                                     <div class="text-center">
-                                        <h5 class="mt-1 mb-4 pb-1"><b>Kindly, Login to your account </b></h5>
+                                        <h5 class="mt-1 mb-4 pb-1"><b> Login to your account </b></h5>
                                     </div>
                                     <div class="form-outline mb-4">
                                         <input type="text" name="u_name" id="" class="form-control"
@@ -87,13 +135,13 @@
 </section>
 
 <script type="text/javascript">
-        function myFunction() {
+    function myFunction() {
         var x = document.getElementById("pass");
         if (x.type === "password") {
-        x.type = "text";
-    } else {
-        x.type = "password";
-    }
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
     }
 </script>
 </body>

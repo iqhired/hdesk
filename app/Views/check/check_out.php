@@ -10,7 +10,7 @@
     <meta name="Keywords" content="admin dashboard, admin dashboard laravel, admin panel template, blade template, blade template laravel, bootstrap template, dashboard laravel, laravel admin, laravel admin dashboard, laravel admin panel, laravel admin template, laravel bootstrap admin template, laravel bootstrap template, laravel template"/>
 
     <!-- Title -->
-    <title> Check in</title>
+    <title> Check Out</title>
 
     <!-- FAVICON -->
 
@@ -77,9 +77,19 @@
     }
     @media (max-width: 1600px) {
 
+
+
+            .bg-image
+            {
+                width:100%;
+                height:720px;
+                background-image:url('public/assets/img/istockphoto1.jpg');
+                background-size:100%;
+                background-repeat:no-repeat;
+            }
         .card {
             padding: 30px 40px;
-            margin-top: 1px;
+            margin-top: -655px;
             margin-bottom: 60px;
             border: none !important;
             box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
@@ -91,7 +101,7 @@
             height: auto;
             width: 134px;
             margin-left: 690px;
-            margin-top: 22px;
+            margin-top: -1423px;
             margin-bottom: -21px;
         }
         a {
@@ -121,21 +131,28 @@
 
     @media (max-width: 800px) {
 
+        .bg-image {
+            width: 267%;
+            height: 890px;
+            background-image: url(public/assets/img/istockphoto1.jpg);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
         .card {
             padding: 30px 40px;
-            margin-top: -52px;
+            margin-top: -762px;
             margin-bottom: 60px;
             border: none !important;
             box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
         }
 
 
-
         .logo_img {
             height: auto;
             width: 139px;
             margin-left: 227px;
-            margin-top: 22px;
+            margin-top: -1710px;
             margin-bottom: 16px;
         }
         a {
@@ -164,6 +181,7 @@
     }
 </style>
 <body>
+<div class="bg-image"></div>
 <a class="navbar-brand" href="<?= base_url('/');?>">
     <image class="logo_img" src="public/assets/img/site_logo.png" alt="logo">
 

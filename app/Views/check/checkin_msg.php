@@ -8,91 +8,68 @@
 
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
     <style>
-        .container-fluid {
-            width: 100%;
-            padding-right: 69px;
-            padding-left: 80px;
-            margin-right: 50px;
-            margin-left: -129px;
-        }
 
+        @media (max-width: 2000px) {
+            .logo_images {
+                width: 29%;
+                margin-left: 150px;
+            }
+            .logo_imag{
+                width: 29%;
+                margin-left: 152px;
+            }
+            .card {
+                padding: 30px 40px;
+                margin-top: 60px;
+                margin-bottom: 60px;
+                border: none !important;
+                box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
+                margin-left: 268px;
+            }
+            .container-fluid {
+                width: 100%;
+                padding-right: 15px;
+                padding-left: 12px;
+                margin-right: auto;
+                margin-left: -138px;
+                margin-top: 196px;
+            }
 
-        .card {
-            padding: 49px 40px;
-            margin-top: 157px;
-            margin-bottom: 76px;
-            border: none !important;
-            box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
-            margin-left: 208px;
-        }
-
-
-        .w-50 {
-            width: 64%!important;
-        }
-        p {
-            margin-top: 80px;
-            margin-bottom: 1rem;
-        }
-        .logo_img{
-            height:auto;
-            width:150px;
-        }
-
-        a {
-            color: #142434;
-            text-decoration: none;
-            background-color: transparent;
-        }
-        .logo_img {
-            height: auto;
-            width: 187px;
-            margin-left: 650px;
-        }
-
-        .logo_images {
-            height: auto;
-            width: 200px;
-            margin-left: 108px;
-        }
-
-        .logo_imag {
-            height: auto;
-            width: 150px;
-            margin-left: 170px;
-            margin-left: 150px;
-        }
-
-        .card {
-            padding: 24px 40px;
-            margin-top: 100px;
-
-            box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
-        }
-
-        .container-fluid.px-7.py-md-5 {
-            margin-top: 70px;
         }
 
         @media (max-width: 800px) {
-
-
-            .logo_imag {
-                height: auto;
-                width: 150px;
-                margin-left: 100px;
-            }
-            .container-fluid.px-7.py-md-5 {
-                margin-top: 165px;
-            }
             .logo_images {
-                height: auto;
-                width: 200px;
-                margin-left: 80px;
-
-
+                width: 58%;
+                margin-left: 41px;
             }
+
+            .logo_imag{
+                width: 29%;
+                margin-left: 152px;
+            }
+
+            .card {
+                padding: 30px 40px;
+                margin-top: 60px;
+                margin-bottom: 60px;
+                border: none !important;
+                box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
+                margin-left: 268px;
+            }
+            .container-fluid {
+                width: 100%;
+                padding-right: 15px;
+                padding-left: 12px;
+                margin-right: auto;
+                margin-left: -138px;
+                margin-top: 196px;
+            }
+
         }
+
+
+
+
 
 
         body{color: #000;overflow-x: hidden;height: 100%;background-repeat: no-repeat;background-size: 100% 100%}.card{padding: 30px 40px;margin-top: 60px;margin-bottom: 60px;border: none !important;box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2)}.blue-text{color: #00BCD4}.form-control-label{margin-bottom: 0}input, textarea, button{padding: 8px 15px;border-radius: 5px !important;margin: 5px 0px;box-sizing: border-box;border: 1px solid #ccc;font-size: 18px !important;font-weight: 300}input:focus, textarea:focus{-moz-box-shadow: none !important;-webkit-box-shadow: none !important;box-shadow: none !important;border: 1px solid #00BCD4;outline-width: 0;font-weight: 400}.btn-block{text-transform: uppercase;font-size: 15px !important;font-weight: 400;height: 43px;cursor: pointer}.btn-block:hover{color: #fff !important}button:focus{-moz-box-shadow: none !important;-webkit-box-shadow: none !important;box-shadow: none !important;outline-width: 0}

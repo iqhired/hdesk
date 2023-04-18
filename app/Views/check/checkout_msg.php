@@ -53,10 +53,10 @@
 
         .container-fluid {
             width: 100%;
-            padding-right: 505px;
+            padding-right: 50px;
             padding-left: 80px;
             margin-right: 106px;
-            margin-left: 206px;
+            margin-left: 65px;
         }
 
         .container-fluid.px-7.py-md-5 {
@@ -72,7 +72,8 @@
             background-color: #def5ef;
         }
 
-        @media (max-width: 800px) {
+        @media (max-width: 800px)
+        {
 
 
             .logo_imag {

@@ -199,7 +199,6 @@ class Home1 extends BaseController
         $data = [
             'u_name' => $this->request->getPost('u_name'),
             'pass' => $this->request->getPost('pass'),
-
         ];
         $user->update($id, $data);
         return redirect()->to(base_url('login_table'))->with('status', 'Check in details Updated  Successfully');

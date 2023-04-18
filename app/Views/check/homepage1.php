@@ -195,35 +195,34 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg " style="background-color: #e8e7f9);">
+    <nav class="navbar navbar-expand-lg " style="background-color:#d7e8ee;">
+        <a class="navbar-brand" href="<?= base_url('homepage');?>">
+            <image class="logo_img" src="public/assets/img/site_logo.png" alt="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="<?= base_url('user_login');?>">User<span class="sr-only">(current)</span></a>
+                </li>
 
-    <a class="navbar-brand" href="<?= base_url('homepage');?>">
-        <image class="logo_img" src="public/assets/img/site_logo.png" alt="logo">
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="<?= base_url('user_login');?>">User<span class="sr-only">(current)</span></a>
-            </li>
-
-            <li class="nav-item active">
-                <a class="nav-link" href="<?= base_url('logs');?>">Logs<span class="sr-only">(current)</span></a>
-            </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="<?= base_url('logs');?>">Logs<span class="sr-only">(current)</span></a>
+                </li>
 
 
-            <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('loginpage');?>">
-                    <image class="logo_images" src="public/assets/img/logout.png" alt="logo">
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= base_url('loginpage');?>">
+                        <image class="logo_images" src="public/assets/img/logout.png" alt="logo">
 
-                </a>
-            </li>
-        </ul>
-    </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
 
-</nav>
+    </nav>
 
 <div class="row row-xs">
     <div class="col-lg-12" >

@@ -109,8 +109,6 @@
 
         }
 
-
-
         .logo_img {
             height: auto;
             width: 134px;
@@ -148,6 +146,33 @@
 
     @media (max-width: 800px) {
         body {margin: 0; height: 100%; overflow: hidden}
+
+        .pd-sm-20 {
+            padding: 3px;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: 1.25rem;
+            margin-right: 1.25rem;
+            margin-top: 4px;
+        }
+
+        .col-md-1 {
+            margin-top: 8px;
+        }
+
+        .card-body {
+            margin-top:10px;
+
+        }
+
+        .mg-t-10 {
+            margin-top: -28px;
+            width: 70%;
+            margin-left: 132px;
+        }
+
         .bg-image
         {
             width:100%;
@@ -156,19 +181,16 @@
             background-size:100%;
             background-repeat:no-repeat;
         }
-        .bg-image {
-            width: 100%;
-            height: 995px;
-            background-image: url(public/assets/img/istockphoto1.jpg);
-            background-size: 264%;
-            background-repeat: no-repeat;
-        }
+
         .card {
-            padding: 30px 40px;
+            padding: 17px 16px;
             margin-top: -52px;
             margin-bottom: 60px;
             border: none !important;
             box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
+        }
+        .card {
+            border-radius: 11px;
         }
         .logo_img {
             height: auto;
@@ -199,7 +221,7 @@
             padding-left: 15px;
             padding-right: 15px;
             width: 93%;
-            margin-top: -980px;
+            margin-top: -861px;
         }
     }
     </style>
